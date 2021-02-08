@@ -1,0 +1,7 @@
+extends:
+    - './dev/.eslintrc.yaml'
+# Project specific override rules may appear here
+
+# rules:
+#   example-override: warn
+#   example-override: off

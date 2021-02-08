@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Node / NPM
+node_modules
+npm-debug.log*
+
+# Caches
+.eslintcache
+.npm
+
+# Generated
+lib-cov
+coverage/*
+!coverage/.gitkeep
+dist/*
+!dist/.gitkeep

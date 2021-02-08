@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "jsx": "react",
+        "paths": {
+            "@/*": ["src/*"]
+        }
+    },
+    "include": ["src/**/*", "src/setupTests.js"]
+}

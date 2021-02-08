@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample container should render 1`] = `
+<div>
+  <div>
+    <h1>
+      Home Page
+    </h1>
+    <div>
+      <ul />
+    </div>
+    <button
+      id="btnContinue"
+    >
+      <span>
+        Continue
+      </span>
+    </button>
+  </div>
+</div>
+`;

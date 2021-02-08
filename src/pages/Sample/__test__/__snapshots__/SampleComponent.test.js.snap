@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sample Component should render 1`] = `
+<div>
+  <div>
+    <ul>
+      <li>
+        title1
+      </li>
+    </ul>
+  </div>
+</div>
+`;
