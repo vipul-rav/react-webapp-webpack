@@ -1,8 +1,8 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
-import * as actionTypes from 'constants/actionTypes';
-import * as urls from 'constants/urls';
+import * as actionTypes from '../../../constants/actionTypes';
+import * as urls from '../../../constants/urls';
 import * as actions from '../configAction';
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

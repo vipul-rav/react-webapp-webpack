@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'setupTests';
+import { render } from '../../../setupTests';
 import { HeaderComponent } from '../HeaderComponent';
 import configureMockStore from 'redux-mock-store';
 

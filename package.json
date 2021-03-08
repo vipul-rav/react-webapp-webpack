@@ -94,7 +94,7 @@
     "lint": "eslint --ext=js --ext=jsx src/",
     "lint:fix": "eslint --ext=js --ext=jsx --fix src/",
     "format": "prettier --write \"./src/**/*.(js|jsx|json|yml|yaml|css|scss)\"",
-    "test:commit": "react-scripts test --watchAll=false",
+    "test:commit": "npm run test",
     "qaCheck": "npm-run-all qa:lint test:coverage",
     "qa:lint": "eslint --quiet --ext .js --ext .jsx src/",
     "lint:report": "npm-run-all --parallel lint:totals lint:detail",

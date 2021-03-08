@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, cleanup } from '@testing-library/react';
 import configureMockStore from 'redux-mock-store';
-import { render } from 'setupTests';
+import { render } from '../../../setupTests';
 import { SampleScreen } from '../SampleScreen';
 
 const content = {

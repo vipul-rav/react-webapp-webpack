@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'setupTests';
+import { render } from '../../../setupTests';
 import { LoaderComponent } from '../LoaderComponent';
 import configureMockStore from 'redux-mock-store';
 
