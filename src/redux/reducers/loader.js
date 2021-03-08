@@ -1,12 +1,13 @@
 const initialState = {
-    loading: true,
+  loading: true
 };
 
 const loader = (state = initialState, action) => {
-    if (action.meta && action.meta.loading !== undefined) {
-        return { ...state, loading: action.meta.loading };
-    }
-    return state;
+  const { meta } = action;
+  if (meta && typeof meta.loading === 'boolean') {
+    return { ...state, loading: meta.loading };
+  }
+  return state;
 };
 
 export { loader };

@@ -1,118 +1,122 @@
 {
-    "name": "base-app",
-    "version": "0.0.1",
-    "private": true,
-    "author": "Vipul Raotole",
-    "lint-staged": {
-        "src/**/*.{js,jsx}": [
-            "npm run lint:fix",
-            "npm run format"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged && npm run test:commit"
-        }
-    },
-    "dependencies": {
-        "connected-react-router": "6.8.0",
-        "cross-spawn": "7.0.3",
-        "cypress": "6.4.0",
-        "fetch-mock": "9.11.0",
-        "history": "4.7.2",
-        "moment": "2.29.1",
-        "node-fetch": "2.6.1",
-        "node-sass": "4.14.1",
-        "npm-run-all": "4.1.5",
-        "prop-types": "15.7.2",
-        "react": "17.0.1",
-        "react-dom": "17.0.1",
-        "react-redux": "7.2.2",
-        "react-router-dom": "5.2.0",
-        "redux": "4.0.5",
-        "redux-api-middleware": "3.2.1",
-        "redux-mock-store": "1.5.4",
-        "redux-thunk": "2.3.0",
-        "sass-loader": "10.1.1",
-        "seamless-immutable": "7.1.4",
-        "typescript": "4.1.3",
-        "url-loader": "4.1.1",
-        "whatwg-fetch": "3.5.0"
-    },
-    "devDependencies": {
-        "@babel/core": "7.12.13",
-        "@babel/plugin-syntax-jsx": "7.12.13",
-        "@babel/preset-env": "7.12.13",
-        "@babel/preset-react": "7.12.13",
-        "@testing-library/jest-dom": "5.11.9",
-        "@testing-library/react": "^9.4.0",
-        "babel-loader": "8.2.2",
-        "babel-plugin-transform-object-rest-spread": "6.26.0",
-        "babel-preset-env": "1.7.0",
-        "babel-preset-react": "6.24.1",
-        "copy-webpack-plugin": "7.0.0",
-        "cors": "2.8.5",
-        "css-loader": "5.0.1",
-        "eslint": "7.18.0",
-        "eslint-detailed-reporter": "0.8.0",
-        "eslint-formatter-summary": "1.0.5",
-        "eslint-plugin-import": "2.22.1",
-        "eslint-plugin-react": "7.22.0",
-        "express": "4.17.1",
-        "extract-text-webpack-plugin": "3.0.2",
-        "html-webpack-plugin": "5.0.0",
-        "husky": "4.3.8",
-        "jest": "26.6.3",
-        "lint-staged": "10.5.3",
-        "mini-css-extract-plugin": "1.3.5",
-        "moment-locales-webpack-plugin": "1.0.7",
-        "prettier": "2.2.1",
-        "redux-immutable-state-invariant": "2.1.0",
-        "style-loader": "2.0.0",
-        "uglifyjs-webpack-plugin": "2.2.0",
-        "webpack": "5.20.2",
-        "webpack-bundle-analyzer": "4.4.0",
-        "webpack-cli": "4.5.0",
-        "webpack-dev-server": "3.11.2"
-    },
-    "scripts": {
-        "start": "webpack serve --config dev/webpack.dev.config.js",
-        "build": "npm run clean:dist && webpack --config build/webpack.config.js",
-        "test": "jest --config jest.config.js",
-        "test:watch": "jest --config jest.config.js --watch",
-        "test:coverage": "npm run test -- --coverage",
-        "clean:dist": "rimraf ./dist/*.{js,html} ./dist/**/*",
-        "lint": "eslint --ext=js --ext=jsx .",
-        "lint:fix": "eslint --ext=js --ext=jsx --fix .",
-        "format": "prettier --write \"./src/**/*.(js|jsx|json|yml|yaml|css|scss)\"",
-        "test:commit": "react-scripts test --watchAll=false",
-        "qaCheck": "npm-run-all qa:lint test:coverage",
-        "qa:lint": "eslint --quiet --ext .js --ext .jsx src/",
-        "lint:report": "npm-run-all --parallel lint:totals lint:detail",
-        "lint:detail": "node --harmony ./eslint-config/eslint-support/task.eslint-detail.js",
-        "lint:totals": "node --harmony ./eslint-config/eslint-support/task.eslint-totals.js",
-        "stubs": "npm-run-all -p start stubs:endpoint",
-        "stubs:endpoint": "node stubs/server.js"
-    },
-    "eslintConfig": {
-        "extends": [
-            "plugin:prettier/recommended"
-        ]
-    },
-    "eslintIgnore": [
-        "*.test.js",
-        "*.spec.js"
-    ],
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+  "name": "base-app",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Vipul Raotole",
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint:fix",
+      "npm run format"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run test:commit"
     }
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.5.0",
+    "axios": "0.21.1",
+    "connected-react-router": "6.8.0",
+    "core-js": "3.9.1",
+    "cross-spawn": "7.0.3",
+    "cypress": "6.4.0",
+    "fetch-mock": "9.11.0",
+    "history": "4.7.2",
+    "moment": "2.29.1",
+    "node-fetch": "2.6.1",
+    "node-sass": "4.14.1",
+    "npm-run-all": "4.1.5",
+    "prop-types": "15.7.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-redux": "7.2.2",
+    "react-router-dom": "5.2.0",
+    "redux": "4.0.5",
+    "redux-mock-store": "1.5.4",
+    "redux-thunk": "2.3.0",
+    "regenerator-runtime": "0.13.7",
+    "sass-loader": "10.1.1",
+    "seamless-immutable": "7.1.4",
+    "typescript": "4.1.3",
+    "url-loader": "4.1.1",
+    "whatwg-fetch": "3.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.13",
+    "@babel/plugin-proposal-class-properties": "7.13.0",
+    "@babel/plugin-syntax-jsx": "7.12.13",
+    "@babel/preset-env": "7.12.13",
+    "@babel/preset-react": "7.12.13",
+    "@testing-library/jest-dom": "5.11.9",
+    "@testing-library/react": "^9.4.0",
+    "babel-cli": "6.26.0",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.2.2",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "copy-webpack-plugin": "7.0.0",
+    "cors": "2.8.5",
+    "css-loader": "5.0.1",
+    "eslint": "7.18.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-detailed-reporter": "0.8.0",
+    "eslint-formatter-summary": "1.0.5",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "express": "4.17.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "html-webpack-plugin": "5.0.0",
+    "husky": "4.3.8",
+    "jest": "26.6.3",
+    "lint-staged": "10.5.3",
+    "mini-css-extract-plugin": "1.3.5",
+    "moment-locales-webpack-plugin": "1.0.7",
+    "optimize-css-assets-webpack-plugin": "5.0.4",
+    "prettier": "2.2.1",
+    "style-loader": "2.0.0",
+    "terser-webpack-plugin": "5.1.1",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "webpack": "5.20.2",
+    "webpack-bundle-analyzer": "4.4.0",
+    "webpack-cli": "4.5.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "scripts": {
+    "start": "webpack serve --config dev/webpack.dev.config.js",
+    "build": "npm run clean:dist && webpack --config build/webpack.config.js",
+    "test": "jest --config jest.config.js",
+    "test:watch": "jest --config jest.config.js --watch",
+    "test:coverage": "npm run test -- --coverage",
+    "clean:dist": "rimraf ./dist/*.{js,html} ./dist/**/*",
+    "lint": "eslint --ext=js --ext=jsx src/",
+    "lint:fix": "eslint --ext=js --ext=jsx --fix src/",
+    "format": "prettier --write \"./src/**/*.(js|jsx|json|yml|yaml|css|scss)\"",
+    "test:commit": "react-scripts test --watchAll=false",
+    "qaCheck": "npm-run-all qa:lint test:coverage",
+    "qa:lint": "eslint --quiet --ext .js --ext .jsx src/",
+    "lint:report": "npm-run-all --parallel lint:totals lint:detail",
+    "lint:detail": "node --harmony ./eslint-config/eslint-support/task.eslint-detail.js",
+    "lint:totals": "node --harmony ./eslint-config/eslint-support/task.eslint-totals.js",
+    "stubs": "npm-run-all -p start stubs:endpoint",
+    "stubs:endpoint": "node stubs/server.js"
+  },
+  "eslintIgnore": [
+    "*.test.js",
+    "*.spec.js"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

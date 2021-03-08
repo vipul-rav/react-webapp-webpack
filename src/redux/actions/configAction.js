@@ -1,54 +1,46 @@
+import { createAction } from '@reduxjs/toolkit';
+import { GET_METHOD } from '../../constants/stringConstant';
 import * as actionTypes from '../../constants/actionTypes';
 import * as urls from '../../constants/urls';
-import { RSAA } from 'redux-api-middleware';
+import { actionFailed } from './errorAction';
 
-export const fetchConfig = () => ({
-    [RSAA]: {
-        endpoint: urls.ENVconfig,
-        method: 'GET',
-        types: [
-            {
-                type: actionTypes.FETCH_CONFIG,
-                meta: {
-                    loading: true,
-                },
-            },
-            {
-                type: actionTypes.FETCH_CONFIG_SUCCESS,
-                meta: {
-                    loading: false,
-                },
-            },
-            {
-                type: actionTypes.FETCH_CONFIG_FAILED,
-                meta: {
-                    loading: false,
-                },
-            },
-        ],
+export const fetchConfig = createAction(actionTypes.FETCH_CONFIG, function prepare() {
+  return {
+    meta: {
+      loading: true
     },
+    payload: {
+      endpoint: urls.ENVconfig,
+      method: GET_METHOD,
+      onSuccess: configSuccess,
+      onFailure: actionFailed
+    }
+  };
 });
 
-export const fetchContent = () => ({
-    [RSAA]: {
-        endpoint: urls.CONTENT_URL,
-        method: 'GET',
-        types: [
-            {
-                type: actionTypes.FETCH_CONTENT,
-                meta: {
-                    loading: true,
-                },
-            },
-            {
-                type: actionTypes.FETCH_CONTENT_SUCCESS,
-                meta: {
-                    loading: false,
-                },
-            },
-            {
-                type: actionTypes.FETCH_CONTENT_FAILED,
-            },
-        ],
+const configSuccess = createAction(actionTypes.FETCH_CONFIG_SUCCESS, function prepare(response) {
+  return {
+    payload: response
+  };
+});
+
+export const fetchContent = createAction(actionTypes.FETCH_CONTENT, function prepare() {
+  return {
+    meta: {
+      loading: true
     },
+    payload: {
+      endpoint: urls.CONTENT_URL,
+      method: GET_METHOD,
+      onSuccess: contentSuccess,
+      onFailure: actionFailed
+    }
+  };
+});
+
+const contentSuccess = createAction(actionTypes.FETCH_CONTENT_SUCCESS, function prepare(response) {
+  return {
+    meta: { loading: false },
+    payload: response
+  };
 });

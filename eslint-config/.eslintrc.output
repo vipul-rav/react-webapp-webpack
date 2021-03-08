@@ -1,1 +1,25 @@
-All Clear!
+
+..24 | Total Errors
+.112 | Total Warnings
+.136 | Total All
+
+=====Rules=====
+..13 arrow-parens (ERROR)
+...2 prefer-arrow-callback (ERROR)
+.112 quotes (WARNING)
+...4 react/display-name (ERROR)
+...5 react/prop-types (ERROR)
+
+=====Disable=====
+arrow-parens: off
+prefer-arrow-callback: off
+quotes: off
+react/display-name: off
+react/prop-types: off
+
+=====Downgrade=====
+arrow-parens: warn
+prefer-arrow-callback: warn
+quotes: warn
+react/display-name: warn
+react/prop-types: warn

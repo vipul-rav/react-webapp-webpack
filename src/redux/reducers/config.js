@@ -1,19 +1,16 @@
+import { createReducer } from '@reduxjs/toolkit';
 import * as actionTypes from '../../constants/actionTypes';
 
-const config = (state = {}, action) => {
-    switch (action.type) {
-        case actionTypes.FETCH_CONFIG_SUCCESS:
-            return { ...state, envUrl: action.payload };
-        case actionTypes.SET_QUERY_PARAMS:
-            return {
-                ...state,
-                ...action.params,
-            };
-        case actionTypes.FETCH_CONTENT_SUCCESS:
-            return { ...state, externalContent: action.payload };
-        default:
-            return state;
+const config = createReducer(
+  {},
+  {
+    [actionTypes.FETCH_CONFIG_SUCCESS]: (state, action) => {
+      return { ...state, envUrl: action.payload };
+    },
+    [actionTypes.FETCH_CONTENT_SUCCESS]: (state, action) => {
+      return { ...state, externalContent: action.payload };
     }
-};
+  }
+);
 
 export { config };

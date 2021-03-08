@@ -4,9 +4,6 @@ exports[`Sample2 container should render 1`] = `
 <div>
   <div>
     Sample 2 Component.
-    <button>
-      asasd
-    </button>
   </div>
 </div>
 `;

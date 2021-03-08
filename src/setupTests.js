@@ -6,16 +6,15 @@ import configureMockStore from 'redux-mock-store';
 
 let store;
 beforeEach(() => {
-    const mockStore = configureMockStore();
-    store = mockStore();
+  const mockStore = configureMockStore();
+  store = mockStore();
 });
 
 // eslint-disable-next-line react/prop-types
 const AllTheProviders = ({ children }) => {
-    return <Provider store={store}>{children}</Provider>;
+  return <Provider store={store}>{children}</Provider>;
 };
-const customRender = (ui, options) =>
-    render(ui, { wrapper: AllTheProviders, ...options });
+const customRender = (ui, options) => render(ui, { wrapper: AllTheProviders, ...options });
 
 // re-export everything
 export * from '@testing-library/react';

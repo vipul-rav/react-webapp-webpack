@@ -6,13 +6,13 @@ import { error } from './error';
 import { post } from './post';
 
 const rootReducer = (history) => {
-    return combineReducers({
-        loader,
-        config,
-        error,
-        post,
-        router: connectRouter(history),
-    });
+  return combineReducers({
+    loader,
+    config,
+    error,
+    post,
+    router: connectRouter(history)
+  });
 };
 
 export { rootReducer };

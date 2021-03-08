@@ -1,71 +1,53 @@
+import { createAction } from '@reduxjs/toolkit';
+import { actionFailed } from './errorAction';
+import { GET_METHOD } from '../../constants/stringConstant';
 import * as actionTypes from '../../constants/actionTypes';
 import * as urls from '../../constants/urls';
-import { createAction, getJSON } from 'redux-api-middleware';
 
-export const getPostList = () => ({
-    type: actionTypes.FETCH_POSTS,
-    meta: { nextAction: getPosts() },
+export const getPostList = createAction(actionTypes.FETCH_POSTS, function prepare() {
+  return {
+    meta: {
+      loading: true
+    },
+    payload: {
+      endpoint: urls.GET_POST_LIST,
+      method: GET_METHOD,
+      onSuccess: postsSuccess,
+      onFailure: actionFailed
+    }
+  };
 });
 
-export const getPosts = () => {
-    return createAction({
-        endpoint: urls.GET_POST_LIST,
-        method: 'GET',
-        types: [
-            {
-                type: actionTypes.FETCH_POSTS,
-                meta: {
-                    loading: true,
-                },
-            },
-            {
-                type: actionTypes.FETCH_POSTS_SUCCESS,
-                //Sample api call for next api call
-                payload: (_action, _state, res) =>
-                    getJSON(res).then((json) => {
-                        res.json = json;
-                        return json;
-                    }),
-                meta: (_action, _state, res) => {
-                    return {
-                        nextAction: getPostDetails(res.json[0].id),
-                        loading: true,
-                    };
-                },
-            },
-            {
-                type: actionTypes.FETCH_POSTS_FAILED,
-                meta: {
-                    loading: false,
-                },
-            },
-        ],
-    });
+const postsSuccess = (response) => (dispatch) => {
+  dispatch(postListSuccess(response));
+  dispatch(getPostDetails(response[0].id));
 };
 
-export const getPostDetails = (postId) => {
-    return createAction({
-        endpoint: `${urls.GET_POST_BY_ID}${postId}`,
-        method: 'GET',
-        types: [
-            {
-                type: actionTypes.FETCH_POSTS_DETAILS,
-                meta: {
-                    loading: true,
-                },
-            },
-            {
-                type: actionTypes.FETCH_POSTS_DETAILS_SUCCESS,
-                meta: {
-                    loading: false,
-                },
-            },
-            {
-                type: actionTypes.FETCH_POSTS_DETAILS_FAILED,
-                meta: {
-                    loading: false,
-                },
-            },
-        ],
-    });
-};
+const postListSuccess = createAction(actionTypes.FETCH_POSTS_SUCCESS, function prepare(response) {
+  return {
+    payload: response
+  };
+});
+
+export const getPostDetails = createAction(actionTypes.FETCH_POSTS_DETAILS, function prepare(postId) {
+  return {
+    meta: {
+      loading: true
+    },
+    payload: {
+      endpoint: `${urls.GET_POST_BY_ID}${postId}`,
+      method: GET_METHOD,
+      onSuccess: postDetailSuccess,
+      onFailure: actionFailed
+    }
+  };
+});
+
+const postDetailSuccess = createAction(actionTypes.FETCH_POSTS_DETAILS_SUCCESS, function prepare(response) {
+  return {
+    payload: response,
+    meta: {
+      loading: false
+    }
+  };
+});

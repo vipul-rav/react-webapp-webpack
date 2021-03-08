@@ -1,2 +1,2 @@
-export { getPostList } from './postList.js';
-export { getPost } from './post.js';
+export { getPostList } from "./postList.js";
+export { getPost } from "./post.js";

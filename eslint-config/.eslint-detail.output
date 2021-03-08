@@ -1,0 +1,152 @@
+=====Files=====
+ERROR: arrow-parens x 13 
+--------
+C:\Vipul\github-repo\react-webapp-webpack\src\hocs\withContent.js > Ln 5, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 4, Col 27
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 4, Col 38
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\historyMiddleware.js > Ln 3, Col 28
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\historyMiddleware.js > Ln 3, Col 39
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\nextActionMiddleware.js > Ln 1, Col 31
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\nextActionMiddleware.js > Ln 1, Col 42
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 28, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 8, Col 31
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 8, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 9, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\sampleAction.js > Ln 3, Col 38
+C:\Vipul\github-repo\react-webapp-webpack\src\selectors\config.js > Ln 1, Col 24
+
+ERROR: prefer-arrow-callback x 2 
+--------
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 11, Col 27
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleScreen.js > Ln 5, Col 27
+
+WARNING: quotes x 112 
+--------
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Error\ErrorComponent.js > Ln 1, Col 34
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Error\ErrorComponent.js > Ln 2, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Header\HeaderComponent.js > Ln 1, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Header\HeaderComponent.js > Ln 2, Col 18
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Loader\LoaderComponent.js > Ln 1, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Loader\LoaderComponent.js > Ln 2, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Loader\LoaderComponent.js > Ln 22, Col 22
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 1, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 2, Col 37
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 3, Col 36
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 4, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 5, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 6, Col 38
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 7, Col 37
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 8, Col 28
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 9, Col 36
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 10, Col 35
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 11, Col 36
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 12, Col 44
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 13, Col 43
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\actionTypes.js > Ln 15, Col 32
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\stringConstant.js > Ln 1, Col 24
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\urls.js > Ln 1, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\urls.js > Ln 2, Col 28
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\urls.js > Ln 3, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\constants\urls.js > Ln 4, Col 31
+C:\Vipul\github-repo\react-webapp-webpack\src\hocs\withContent.js > Ln 1, Col 19
+C:\Vipul\github-repo\react-webapp-webpack\src\hocs\withContent.js > Ln 2, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\hocs\withContent.js > Ln 3, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 1, Col 8
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 2, Col 19
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 3, Col 22
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 4, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 5, Col 21
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 6, Col 31
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 7, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 8, Col 43
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 9, Col 8
+C:\Vipul\github-repo\react-webapp-webpack\src\index.js > Ln 21, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 1, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 2, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 25, Col 17
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 26, Col 9
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\apiUrlMiddleware.js > Ln 26, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\middlewares\historyMiddleware.js > Ln 1, Col 22
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 1, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 2, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 3, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 4, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 5, Col 27
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 6, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 7, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 8, Col 32
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 9, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample2\Sample2Container.js > Ln 1, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample2\index.js > Ln 1, Col 45
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 1, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 1, Col 45
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 2, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 3, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 4, Col 38
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 5, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleContainer.js > Ln 6, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleScreen.js > Ln 1, Col 40
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleScreen.js > Ln 2, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleScreen.js > Ln 3, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleScreen.js > Ln 21, Col 53
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\index.js > Ln 1, Col 44
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\configAction.js > Ln 1, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\configAction.js > Ln 2, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\configAction.js > Ln 3, Col 22
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\configAction.js > Ln 8, Col 17
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\configAction.js > Ln 35, Col 17
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\postAction.js > Ln 1, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\postAction.js > Ln 2, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\postAction.js > Ln 3, Col 39
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\postAction.js > Ln 13, Col 17
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\postAction.js > Ln 49, Col 17
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\actions\sampleAction.js > Ln 1, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\config.js > Ln 1, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\error.js > Ln 7, Col 58
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\index.js > Ln 1, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\index.js > Ln 2, Col 31
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\index.js > Ln 3, Col 24
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\index.js > Ln 4, Col 24
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\index.js > Ln 5, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\index.js > Ln 6, Col 22
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\reducers\post.js > Ln 1, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 1, Col 55
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 2, Col 31
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 3, Col 19
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 4, Col 47
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 5, Col 34
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 6, Col 34
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 7, Col 38
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 8, Col 35
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 9, Col 29
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 10, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 20, Col 30
+C:\Vipul\github-repo\react-webapp-webpack\src\redux\store\index.js > Ln 33, Col 23
+C:\Vipul\github-repo\react-webapp-webpack\src\routes\index.js > Ln 1, Col 39
+C:\Vipul\github-repo\react-webapp-webpack\src\routes\index.js > Ln 2, Col 39
+C:\Vipul\github-repo\react-webapp-webpack\src\routes\index.js > Ln 3, Col 38
+C:\Vipul\github-repo\react-webapp-webpack\src\routes\index.js > Ln 5, Col 43
+C:\Vipul\github-repo\react-webapp-webpack\src\routes\index.js > Ln 6, Col 44
+C:\Vipul\github-repo\react-webapp-webpack\src\selectors\index.js > Ln 1, Col 34
+C:\Vipul\github-repo\react-webapp-webpack\src\setupTests.js > Ln 1, Col 19
+C:\Vipul\github-repo\react-webapp-webpack\src\setupTests.js > Ln 2, Col 8
+C:\Vipul\github-repo\react-webapp-webpack\src\setupTests.js > Ln 3, Col 24
+C:\Vipul\github-repo\react-webapp-webpack\src\setupTests.js > Ln 4, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\setupTests.js > Ln 5, Col 32
+C:\Vipul\github-repo\react-webapp-webpack\src\setupTests.js > Ln 21, Col 15
+
+ERROR: react/display-name x 4 
+--------
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Header\HeaderComponent.js > Ln 4, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\components\Loader\LoaderComponent.js > Ln 4, Col 25
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample2\Sample2Container.js > Ln 3, Col 26
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 3, Col 25
+
+ERROR: react/prop-types x 5 
+--------
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\App.js > Ln 16, Col 49
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 3, Col 33
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 3, Col 43
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 5, Col 18
+C:\Vipul\github-repo\react-webapp-webpack\src\pages\Sample\SampleComponent.js > Ln 8, Col 26
+

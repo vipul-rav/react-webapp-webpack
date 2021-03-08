@@ -10,9 +10,12 @@ exports[`Sample container should render 1`] = `
       <ul />
     </div>
     <button
+      class="c-a-button c-a-button--size-md c-a-button--primary"
       id="btnContinue"
     >
-      <span>
+      <span
+        class="c-a-button__title"
+      >
         Continue
       </span>
     </button>

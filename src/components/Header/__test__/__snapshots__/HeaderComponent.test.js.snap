@@ -5,7 +5,7 @@ exports[`Header Component should render 1`] = `
   <header>
     <img
       alt="Logo"
-      src="test-file-stub"
+      src="logo.png"
     />
   </header>
 </div>

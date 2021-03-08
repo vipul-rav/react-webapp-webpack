@@ -1,42 +1,46 @@
-import { isRSAA, RSAA } from 'redux-api-middleware';
+import axios from 'axios';
 import { configSelectors } from '../selectors';
 
-const apiUrlMiddleware = (store) => (next) => (action) => {
-    if (!isRSAA(action)) {
-        return next(action);
-    }
+const apiUrlMiddleware = (store) => (next) => async (action) => {
+  const result = await next(action);
+  const { payload } = action;
+  if (!payload || !payload.endpoint) {
+    return result;
+  }
 
-    const storeState = store.getState();
+  const { endpoint, method, onSuccess, onFailure, body } = payload;
 
-    const urlSelectors = {
-        apiUrl: configSelectors.apiUrl,
-    };
+  const storeState = store.getState();
 
-    const endpoint = Object.keys(urlSelectors).reduce(
-        (curEndpoint, selectorKey) =>
-            curEndpoint.replace(
-                selectorKey,
-                urlSelectors[selectorKey](storeState)
-            ),
-        action[RSAA].endpoint
-    );
+  const urlSelectors = {
+    apiUrl: configSelectors.apiUrl
+  };
 
-    const headers = {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-    };
+  const newEndpoint = Object.keys(urlSelectors).reduce(
+    (curEndpoint, selectorKey) => curEndpoint.replace(selectorKey, urlSelectors[selectorKey](storeState)),
+    endpoint
+  );
 
-    return next({
-        ...action,
-        [RSAA]: {
-            ...action[RSAA],
-            headers: {
-                ...action[RSAA].headers,
-                ...headers,
-            },
-            endpoint,
-        },
+  const headers = {
+    Accept: 'application/json',
+    'Content-Type': 'application/json'
+  };
+
+  try {
+    const response = await axios.request({
+      url: newEndpoint,
+      method,
+      headers,
+      ...(body && { data: JSON.stringify(body) })
     });
+    if (response.status === 200) {
+      store.dispatch(onSuccess(response.data));
+    } else {
+      store.dispatch(onFailure(response.data));
+    }
+  } catch (error) {
+    store.dispatch(onFailure(error));
+  }
 };
 
 export { apiUrlMiddleware };
