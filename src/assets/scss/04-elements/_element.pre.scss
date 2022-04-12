@@ -1,0 +1,16 @@
+// =============================================================================
+/* _element.pre */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/pre
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Correct the inheritance and scaling of font size in all browsers (^).
+// [2] Correct the odd `em` font sizing in all browsers (^).
+
+pre {
+    font-family: monospace, monospace; // [1]
+    font-size: 1em; // [2]
+    margin-bottom: size(2);
+}

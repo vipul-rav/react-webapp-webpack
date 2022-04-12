@@ -1,0 +1,15 @@
+// =============================================================================
+/* _element.q */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/q
+
+q {
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
+}

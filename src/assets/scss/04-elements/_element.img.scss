@@ -1,0 +1,14 @@
+// =============================================================================
+/* _element.img */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/img
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Remove the border on images inside links in IE 10- (^).
+
+img {
+    border-style: none; // [1]
+    max-width: 100%;
+}

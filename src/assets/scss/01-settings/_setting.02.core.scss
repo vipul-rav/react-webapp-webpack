@@ -1,0 +1,16 @@
+// =============================================================================
+// _setting.core
+// =============================================================================
+//
+// These core settings define the most important variables.
+//
+// These variables underpin high-level layout and should be modified and
+// preconfigured with caution.
+
+$core-font-size: 16px !default;
+
+// Core minimum site width
+// =======================
+// This setting is used to hold a sensible value for a minimum device width.
+
+$core-min-size-width: 320px !default;

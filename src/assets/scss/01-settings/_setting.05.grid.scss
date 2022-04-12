@@ -1,0 +1,59 @@
+// =============================================================================
+// _setting.grid
+// =============================================================================
+//
+// These grid based variables are used to define grid rules and settings.
+
+// Grid columns
+// ============
+// This setting is used to set the number of grid columns.
+
+$grid-columns: 24 !default;
+
+// Grid classes enabled
+// ====================
+// This setting enables predefined grid classes.
+
+$grid-classes-enabled: true !default;
+
+// Grid flex enabled
+// =================
+// This setting enables grid layouts to be flex based.
+
+$grid-flex-enabled: true !default;
+
+// Grid breakpoints
+// ================
+// This setting is used to define grid breakpoint sizes as key/values
+// within a map.
+
+$grid-breakpoints: (
+    xs1: 0,
+    xs2: 480px,
+    sm1: 600px,
+    sm2: 840px,
+    md1: 960px,
+    lg1: 1280px,
+    lg2: 1440px,
+    lg3: 1600px,
+    xl1: 1920px
+) !default;
+
+// Grid gutter widths
+// ==================
+// These settings are used to define a grid gutter base and gutter widths as
+// key/values within a map.
+
+$grid-gutter-width-base: size(2) !default;
+
+$grid-gutter-widths: (
+    xs1: size(2),
+    xs2: size(2),
+    sm1: size(3),
+    sm2: size(3),
+    md1: size(4),
+    lg1: size(4),
+    lg2: size(4),
+    lg3: size(4),
+    xl1: size(4)
+) !default;

@@ -1,0 +1,21 @@
+// =============================================================================
+/* _utility.white-space */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// white-space property and value.
+//
+// Usage:
+//  <div class="u-white-space">
+//    ...
+
+// .u-white-space
+// ==============
+
+.u-white-space {
+    // nowrap
+
+    &-nowrap {
+        white-space: nowrap !important;
+    }
+}

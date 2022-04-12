@@ -1,0 +1,16 @@
+// =============================================================================
+/* _element.td */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/td
+
+td {
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid $color-grey;
+    padding: size(1);
+
+    table {
+        margin-bottom: 0;
+    }
+}

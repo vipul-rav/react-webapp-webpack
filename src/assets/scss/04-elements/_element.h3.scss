@@ -1,0 +1,11 @@
+// =============================================================================
+/* _element.h3 */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/h3
+
+h3 {
+    @include font-display(heavy);
+    @extend .o-type-size-base5;
+    margin-bottom: size(2);
+}

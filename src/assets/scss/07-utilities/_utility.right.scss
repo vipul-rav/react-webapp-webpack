@@ -1,0 +1,26 @@
+// =============================================================================
+/* _utility.right */
+// =============================================================================
+//
+// This utility creates a class that applies a css right property and value.
+//
+// Usage:
+//  <div class="u-right-2">
+//    ...
+
+// .u-right
+// ========
+
+.u-right {
+    &-0 {
+        right: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-#{$i} {
+            right: ($size) !important;
+        }
+    }
+}

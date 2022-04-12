@@ -1,0 +1,97 @@
+// =============================================================================
+// _tool.font
+// =============================================================================
+//
+// These tools are used to set up collective font properties including;
+// families, source, weights and styles.
+
+// Font face
+// =========
+// The following tool is used to generate the diffetent font-face properties in
+// each of the required families, weights, styles and formats.
+
+@mixin font-face($font-family, $font-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$font-path}.woff2') format('woff2'), url('#{$font-path}.woff') format('woff');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+// Text font sourcing
+// ==================
+// Get and set font properties for text fonts.
+
+// Default text fonts
+
+@include font-face($font-text-name, $font-text-src, $font-text-weight, $font-text-style);
+
+// Heavy text fonts
+
+@include font-face($font-text-heavy-name, $font-text-heavy-src, $font-text-heavy-weight, $font-text-heavy-style);
+
+// Text font setup
+// ===============
+// Text based fonts are typically used for body copy.
+// Usage:
+//   .selector { @include font-text(heavy) }
+
+@mixin font-text($type: default) {
+    // Italic text fonts
+
+    // Heavy text fonts
+
+    @if $type == heavy {
+        font-family: '#{$font-text-heavy-name}', #{$font-text-fallback};
+        font-weight: #{$font-text-heavy-weight};
+        font-style: #{$font-text-heavy-style};
+    }
+
+    // Default text fonts
+
+    @else {
+        font-family: '#{$font-text-name}', #{$font-text-fallback};
+        font-weight: #{$font-text-weight};
+        font-style: #{$font-text-style};
+    }
+}
+
+// Display font sourcing
+// =====================
+// Get and set font properties for display fonts.
+
+// Default display fonts
+
+@include font-face($font-display-name, $font-display-src, $font-display-weight, $font-display-style);
+
+// Heavy display fonts
+
+@include font-face(
+    $font-display-heavy-name,
+    $font-display-heavy-src,
+    $font-display-heavy-weight,
+    $font-display-heavy-style
+);
+
+// Display font setup
+// ==================
+// Display based fonts are typically used for headings.
+// Usage:
+//   .selector { @include font-text(heavy) }
+
+@mixin font-display($type: default) {
+    @if $type == heavy {
+        font-family: '#{$font-display-heavy-name}', #{$font-display-fallback};
+        font-weight: #{$font-display-heavy-weight};
+        font-style: #{$font-display-heavy-style};
+    }
+
+    // Default display fonts
+
+    @else {
+        font-family: '#{$font-display-name}', #{$font-display-fallback};
+        font-weight: #{$font-display-weight};
+        font-style: #{$font-display-style};
+    }
+}

@@ -1,0 +1,21 @@
+// =============================================================================
+/* _utility.text-decoration */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// text-decoration property and value.
+//
+// Usage:
+//  <div class="u-text-decoration-none">
+//    ...
+
+// .u-text-decoration
+// ==================
+
+.u-text-decoration {
+    // None
+
+    &-none {
+        text-decoration: none !important;
+    }
+}

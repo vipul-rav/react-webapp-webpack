@@ -1,0 +1,10 @@
+// =============================================================================
+/* _element.caption */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/caption
+
+caption {
+    @extend .u-visually-hidden;
+    position: static;
+}

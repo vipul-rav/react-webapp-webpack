@@ -1,0 +1,62 @@
+// =============================================================================
+/* _component.atom.textarea */
+// =============================================================================
+//
+// Multi-line textarea styling.
+
+// Component settings
+// ==================
+
+$c-a-textarea-background-color: $color-white !default;
+$c-a-textarea-background-color-disabled: $color-white !default;
+$c-a-textarea-background-color-focus: $color-white !default;
+
+$c-a-textarea-border-width: 1px !default;
+$c-a-textarea-border-style: solid !default;
+$c-a-textarea-border-color: $color-body !default;
+$c-a-textarea-border-color-disabled: mix($color-body, $color-white, 30%) !default;
+$c-a-textarea-border-color-focus: $color-body !default;
+
+$c-a-textarea-color: $color-body !default;
+$c-a-textarea-color-disabled: mix($color-body, $color-white, 30%) !default;
+$c-a-textarea-color-focus: $color-body !default;
+
+// .c-a-textarea
+// =============
+
+.c-a-textarea {
+    @include type-responsive(base3);
+    width: 100%;
+    padding: size(1);
+    min-height: size(8);
+    height: block-field(3);
+    color: $c-a-textarea-color;
+    border-width: $c-a-textarea-border-width;
+    border-style: $c-a-textarea-border-style;
+    border-color: $c-a-textarea-border-color;
+    border-radius: $global-radius;
+    background-color: $c-a-textarea-background-color;
+
+    // .is-disabled or [disabled]
+
+    &.is-disabled,
+    &[disabled] {
+        color: $c-a-textarea-color-disabled;
+        border-color: $c-a-textarea-border-color-disabled;
+        background-color: $c-a-textarea-background-color-disabled;
+
+        &:hover {
+            cursor: default;
+        }
+    }
+
+    // :focus
+
+    &:focus {
+        color: $c-a-textarea-color-focus;
+        border-color: $c-a-textarea-border-color-focus;
+        background-color: $c-a-textarea-background-color-focus;
+        position: relative;
+        @include layers(root);
+    }
+}

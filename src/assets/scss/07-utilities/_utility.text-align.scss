@@ -1,0 +1,62 @@
+// =============================================================================
+/* _utility.text-align */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// text-align property and value.
+//
+// Usage:
+//  <div class="u-text-align-left">
+//    ...
+//  <div class="u-text-align-left-md1">
+//    ...
+
+// .u-text-align
+// =============
+
+.u-text-align {
+    // left
+
+    &-left {
+        text-align: left !important;
+
+        @each $breakpoint, $num in ($grid-breakpoints) {
+            $key: nth($breakpoint, 1);
+            @include media-breakpoint-up($key) {
+                &-#{$key} {
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+
+    // center
+
+    &-center {
+        text-align: center !important;
+
+        @each $breakpoint, $num in ($grid-breakpoints) {
+            $key: nth($breakpoint, 1);
+            @include media-breakpoint-up($key) {
+                &-#{$key} {
+                    text-align: center !important;
+                }
+            }
+        }
+    }
+
+    // right
+
+    &-right {
+        text-align: right !important;
+
+        @each $breakpoint, $num in ($grid-breakpoints) {
+            $key: nth($breakpoint, 1);
+            @include media-breakpoint-up($key) {
+                &-#{$key} {
+                    text-align: right !important;
+                }
+            }
+        }
+    }
+}

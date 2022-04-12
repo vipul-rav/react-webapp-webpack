@@ -1,0 +1,21 @@
+// =============================================================================
+// _tool.block-field
+// =============================================================================
+//
+// This tool is used to generate consistent values and units, mainly used for
+// grouped field based combinations.
+
+// Block field settings
+// ====================
+// These values are set using the size function, hence their place as a local
+// setting.
+
+$block-field-col-size: size(6);
+$block-field-gutter-size: size(2);
+
+// Block field
+// ===========
+
+@function block-field($num) {
+    @return ($block-field-col-size * $num) + ($block-field-gutter-size * ($num - 1)) + 0px;
+}

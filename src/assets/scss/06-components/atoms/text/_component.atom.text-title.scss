@@ -1,0 +1,24 @@
+// =============================================================================
+/* _component.atom.text-title-1 */
+// =============================================================================
+
+// Component settings
+// ==================
+
+// .c-a-text-title
+// =================
+
+.c-a-text-title-s {
+  @include font-display();
+  @extend .o-type-size-base5;
+}
+
+.c-a-text-title-m {
+  @include font-display(heavy);
+  @extend .o-type-size-base6;
+}
+
+.c-a-text-title-l {
+  @include font-display(heavy);
+  @extend .o-type-size-base7;
+}

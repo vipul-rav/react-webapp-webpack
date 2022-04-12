@@ -1,0 +1,43 @@
+// =============================================================================
+// _setting.container
+// =============================================================================
+//
+// These settings define common and reusable container paddings.
+
+// Container padding
+// =================
+// This setting is used to define container padding names and values as
+// key/values within a map.
+
+$container-padding: (
+    xs1: size(2),
+    xs2: size(2),
+    sm1: size(3),
+    sm2: size(3),
+    md1: size(3),
+    lg1: size(3),
+    lg2: size(3),
+    lg3: size(3),
+    xl1: size(3)
+) !default;
+
+// Container max widths
+// ====================
+// This setting is used to define container max width names and values as
+// key/values within a map.
+
+$container-max-widths: (
+    xl1: 1920px
+) !default;
+
+// Container custom widths
+// =======================
+// This setting is used to define container max width names and values as
+// key/values within a map.
+
+$container-custom-widths: (
+    xs: 320px,
+    sm: 640px,
+    md: 960px,
+    lg: 1280px
+) !default;

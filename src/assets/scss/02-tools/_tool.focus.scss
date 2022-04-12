@@ -1,0 +1,29 @@
+// =============================================================================
+// _tool.focus
+// =============================================================================
+//
+// Focus is used to provide a visual and consistant cross-browser style for
+// interactive elements that have focus.
+
+// focus-add
+// =========
+// Used to add a visual and consistant cross-browser style for any default or
+// interactive elements that need focus.
+// Usage:
+//   .selector { @include focus-add() }
+
+@mixin focus-add() {
+    outline: 0;
+    box-shadow: 0 0 0 2px $color-focus;
+}
+
+// focus-remove
+// ============
+// Used to remove focus style that is more appropriately applied elsewhere.
+// Usage:
+//   .selector { @include focus-remove() }
+
+@mixin focus-remove() {
+    outline: 0;
+    box-shadow: none;
+}

@@ -1,0 +1,39 @@
+// =============================================================================
+/* _utility.full-width */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a property and
+// value for full width scenarios.
+//
+// Usage:
+//  <div class="u-full-width-sm1">
+//    ...
+
+// .u-full-width
+// =============
+
+.u-full-width {
+    width: 100% !important;
+
+    // -#{$key}-up
+
+    @each $breakpoint, $num in ($grid-breakpoints) {
+        $key: nth($breakpoint, 1);
+        @include media-breakpoint-up($key) {
+            &-#{$key}-up {
+                width: 100% !important;
+            }
+        }
+    }
+
+    // -#{$key}-down
+
+    @each $breakpoint, $num in ($grid-breakpoints) {
+        $key: nth($breakpoint, 1);
+        @include media-breakpoint-down($key) {
+            &-#{$key}-down {
+                width: 100% !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,404 @@
+// =============================================================================
+/* _component.atom.radio */
+// =============================================================================
+//
+// Radio input styling.
+
+// Component settings
+// ==================
+
+$c-a-radio-control-background-color: $color-white !default;
+$c-a-radio-control-background-color-checked: $color-white !default;
+$c-a-radio-control-background-color-disabled: mix($color-body, $color-white, 10%) !default;
+$c-a-radio-control-background-color-checked-disabled: mix($color-body, $color-white, 10%) !default;
+
+$c-a-radio-control-border-width: size(0.25) !default;
+$c-a-radio-control-border-style: solid !default;
+$c-a-radio-control-border-color: palette-primary(1) !default;
+$c-a-radio-control-border-color-checked: palette-primary(1) !default;
+$c-a-radio-control-border-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-control-border-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-control-fill: transparent !default;
+$c-a-radio-control-fill-checked: palette-primary(1) !default;
+$c-a-radio-control-fill-disabled: transparent !default;
+$c-a-radio-control-fill-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-title-color: $color-body !default;
+$c-a-radio-title-color-checked: $color-body !default;
+$c-a-radio-title-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-title-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+// Block modified
+
+$c-a-radio-block-background-color: $color-white !default;
+$c-a-radio-block-background-color-checked: palette-primary(1) !default;
+$c-a-radio-block-background-color-disabled: $color-white !default;
+$c-a-radio-block-background-color-checked-disabled: $color-white !default;
+
+$c-a-radio-block-control-background-color: transparent !default;
+$c-a-radio-block-control-background-color-checked: palette-primary(1) !default;
+$c-a-radio-block-control-background-color-disabled: mix($color-body, $color-white, 10%) !default;
+$c-a-radio-block-control-background-color-checked-disabled: mix($color-body, $color-white, 10%) !default;
+
+$c-a-radio-block-control-border-color: palette-primary(1) !default;
+$c-a-radio-block-control-border-color-checked: $color-white !default;
+$c-a-radio-block-control-border-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-block-control-border-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-block-control-fill: $color-white !default;
+$c-a-radio-block-control-fill-checked: $color-white !default;
+$c-a-radio-block-control-fill-disabled: transparent !default;
+$c-a-radio-block-control-fill-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-block-label-border-width: size(0.125) !default;
+$c-a-radio-block-label-border-style: solid !default;
+$c-a-radio-block-label-border-color: palette-primary(1) !default;
+$c-a-radio-block-label-border-color-checked: palette-primary(1) !default;
+$c-a-radio-block-label-border-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-block-label-border-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-block-title-color: $color-body !default;
+$c-a-radio-block-title-color-checked: $color-white !default;
+$c-a-radio-block-title-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-block-title-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+// .c-a-radio
+// ==========
+
+.c-a-radio {
+    display: inline-flex;
+    vertical-align: top;
+    position: relative;
+    margin-right: size(2);
+
+    input {
+        @extend .u-visually-hidden;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: block-field(1);
+        border-radius: $global-radius;
+
+        &:before {
+            content: '';
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    // __body
+
+    .c-a-radio__body {
+        user-select: none;
+        display: flex;
+
+        // control
+
+        > .c-a-icon {
+            display: block;
+            position: absolute;
+            top: calc(#{size(2)} - 1px);
+            left: 0;
+            width: size(2.5);
+            height: size(2.5);
+            fill: $c-a-radio-control-fill;
+            border-radius: 100%;
+            border-width: $c-a-radio-control-border-width;
+            border-style: $c-a-radio-control-border-style;
+            border-color: $c-a-radio-control-border-color;
+            background-color: $c-a-radio-control-background-color;
+        }
+    }
+
+    // __title
+
+    .c-a-radio__title {
+        color: $c-a-radio-title-color;
+        padding: size(0.5) 0;
+        margin-left: size(3.5);
+
+        // .c-a-popover-trigger
+
+        .c-a-popover-trigger {
+            position: relative;
+            top: size(0.25);
+        }
+    }
+
+    // :focus
+
+    input:focus + label .c-a-radio__body > .c-a-icon {
+        @include focus-add();
+    }
+
+    // .is-checked & :checked
+
+    &.is-checked input + label,
+    input:checked + label {
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: $c-a-radio-control-fill-checked;
+            border-color: $c-a-radio-control-border-color-checked;
+            background-color: $c-a-radio-control-background-color-checked;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+            color: $c-a-radio-title-color-checked;
+        }
+    }
+
+    // .is-disabled & [disabled]
+
+    &.is-disabled input + label,
+    input[disabled] + label {
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: $c-a-radio-control-fill-disabled;
+            border-color: $c-a-radio-control-border-color-disabled;
+            background-color: $c-a-radio-control-background-color-disabled;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+            color: $c-a-radio-title-color-disabled;
+        }
+    }
+
+    // .is-checked & .is-disabled + :checked and [disabled]
+
+    &.is-disabled.is-checked input + label,
+    input:checked[disabled] + label {
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: $c-a-radio-control-fill-checked-disabled;
+            border-color: $c-a-radio-control-border-color-checked-disabled;
+            background-color: $c-a-radio-control-background-color-checked-disabled;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+            color: $c-a-radio-title-color-checked-disabled;
+        }
+    }
+}
+
+// --block
+
+.c-a-radio--block {
+    margin-right: size(2);
+    margin-bottom: size(2);
+
+    label {
+        padding: size(0.5) size(2);
+        border-width: $c-a-radio-block-label-border-width;
+        border-style: $c-a-radio-block-label-border-style;
+        border-color: $color-body;
+        border-radius: $global-radius;
+        background-color: $c-a-radio-block-background-color;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // __body
+
+    .c-a-radio__body {
+        // control
+
+        > .c-a-icon {
+            top: calc(#{size(2)} - #{size(0.25)});
+            left: size(2);
+            fill: $c-a-radio-block-control-fill;
+            border-color: $c-a-radio-block-control-border-color;
+            background-color: $c-a-radio-block-control-background-color;
+
+            @include media-breakpoint-up(lg1) {
+                top: calc(#{size(2) - 1px});
+            }
+        }
+    }
+
+    // __title
+
+    .c-a-radio__title {
+        color: $c-a-radio-block-title-color;
+    }
+
+    // .is-checked & :checked
+
+    &.is-checked input + label,
+    input:checked + label {
+        border-color: $c-a-radio-block-label-border-color-checked;
+
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: palette-primary(1);
+            border-color: palette-primary(1);
+            background-color: $color-white;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+        }
+    }
+
+    // .is-disabled & [disabled]
+
+    &.is-disabled input + label,
+    input[disabled] + label {
+        background-color: #ededed;
+        border-color: $color-body;
+
+        &:hover {
+            cursor: default;
+        }
+
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: $c-a-radio-block-control-fill-disabled;
+            border-color: $c-a-radio-block-control-border-color-disabled;
+            background-color: $c-a-radio-block-control-background-color-disabled;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+            color: $color-body;
+        }
+    }
+
+    // .is-checked & .is-disabled + :checked and [disabled]
+
+    &.is-disabled.is-checked input + label,
+    input:checked[disabled] + label {
+        background-color: $c-a-radio-block-background-color-checked-disabled;
+        border-color: $c-a-radio-block-label-border-color-checked-disabled;
+
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: $c-a-radio-block-control-fill-checked-disabled;
+            border-color: $c-a-radio-block-control-border-color-checked-disabled;
+            background-color: $c-a-radio-block-control-background-color-checked-disabled;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+            color: $c-a-radio-block-title-color-checked-disabled;
+        }
+    }
+}
+
+// --no-indicator
+
+.c-a-radio--no-indicator {
+    // label
+
+    label {
+        padding: size(0.5) size(2);
+    }
+
+    // __body
+
+    .c-a-radio__body {
+        // .c-a-icon
+
+        > .c-a-icon {
+            display: none;
+        }
+    }
+
+    // __title
+
+    .c-a-radio__title {
+        margin-left: 0;
+    }
+
+    // :focus
+
+    input:focus + label {
+        @include focus-add();
+    }
+
+    // .is-checked & :checked
+
+    &.is-checked input + label,
+    input:checked + label {
+        border-color: $c-a-radio-block-label-border-color-checked;
+        background-color: palette-primary(1);
+
+        // control
+
+        .c-a-radio__body > .c-a-icon {
+            fill: palette-primary(1);
+            border-color: palette-primary(1);
+            background-color: $color-white;
+        }
+
+        // __title
+
+        .c-a-radio__title {
+            color: $color-white;
+        }
+    }
+}
+
+// --no-indicator & --block
+
+.c-a-radio--no-indicator.c-a-radio--block {
+    label {
+        border-color: palette-primary(1);
+    }
+
+    // __body
+
+    .c-a-radio__body {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+// --squared
+
+.c-a-radio--squared {
+    label {
+        padding: 0 size(1);
+        min-width: size(6);
+    }
+
+    // __body
+
+    .c-a-radio__body {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+// --full-width
+
+.c-a-radio--full-width {
+    margin-right: 0;
+    width: 100%;
+}

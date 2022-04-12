@@ -1,0 +1,21 @@
+// =============================================================================
+/* _utility.visually-hidden */
+// =============================================================================
+//
+// This utility creates a single purpose class that is used to hide content,
+// but make it accessible to assistive technologies.
+//
+// Usage:
+//  <div class="u-visually-hidden">
+//    ...
+
+// .u-visually-hidden
+// ==================
+
+.u-visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    position: absolute;
+}

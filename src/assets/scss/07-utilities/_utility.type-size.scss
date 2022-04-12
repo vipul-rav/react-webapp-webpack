@@ -1,0 +1,32 @@
+// =============================================================================
+/* _utility.type-size */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies shared css font and
+// line height related properties and values based on higher level settings.
+//
+// Usage:
+//  <div class="u-type-base4">
+//    ...
+
+// .u-type-size
+// ============
+
+.u-type-size {
+    @each $name in $type-size {
+        // [1]
+        $name: nth($name, 1);
+        &-#{$name} {
+            // [2]
+            @each $breakpoint in $breakpoint-groups {
+                // [3]
+                $key: nth($breakpoint, 1);
+                @include media-breakpoint-up($key) {
+                    // [4]
+                    @include type-setup($name, $key) // [4]
+;
+                }
+            }
+        }
+    }
+}

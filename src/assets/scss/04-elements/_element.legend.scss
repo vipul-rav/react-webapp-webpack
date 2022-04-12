@@ -1,0 +1,9 @@
+// =============================================================================
+/* _element.legend */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/legend
+
+legend {
+    @extend .u-visually-hidden;
+}

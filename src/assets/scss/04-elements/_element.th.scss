@@ -1,0 +1,12 @@
+// =============================================================================
+/* _element.th */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/th
+
+th {
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid $color-grey;
+    padding: size(1);
+}

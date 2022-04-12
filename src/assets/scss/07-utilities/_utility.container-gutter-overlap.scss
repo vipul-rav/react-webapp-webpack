@@ -1,0 +1,25 @@
+// =============================================================================
+/* _utility.container-gutter-overlap */
+// =============================================================================
+//
+// This utility creates a class and associated css rules that allows the content
+// of a container to overlap it's gutter for each breakpoint.
+//
+// Usage:
+//  <div class="u-container-gutter-overlap">
+//    ...
+
+// .u-container-gutter-overlap
+// ===========================
+
+.u-container-gutter-overlap {
+    width: auto !important;
+
+    @each $breakpoint in $breakpoint-groups {
+        $key: nth($breakpoint, 1);
+        @include media-breakpoint-up($key) {
+            margin-left: -#{map-get($container-padding, $key)};
+            margin-right: -#{map-get($container-padding, $key)};
+        }
+    }
+}

@@ -1,0 +1,16 @@
+// =============================================================================
+/* _element.abbr */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/abbr
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Remove the bottom border in Chrome 57- and Firefox 39- (^).
+// [2] Add the correct text decoration in Chrome, Edge, IE, and Safari (^).
+
+abbr[title] {
+    border-bottom: none; // [1]
+    text-decoration: underline; // [2]
+    text-decoration: underline dotted; // [2]
+}

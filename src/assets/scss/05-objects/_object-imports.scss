@@ -1,0 +1,18 @@
+// =============================================================================
+/* _objects */
+// =============================================================================
+//
+// This is the first layer in which class-based selectors are authored.
+//
+// These classes are concerned with styling non-cosmetic and structural
+// design patterns such as common DOM wrappers and grid implementations.
+//
+// This layer has a higher specificity than the previous layer, and is slightly
+// more explicit, now that areas of the DOM are being styled with classes.
+
+@import 'object.type-size';
+@import 'object.type-label';
+@import 'object.block-field';
+@import 'object.container';
+@import 'object.grid';
+@import 'object.global-header';

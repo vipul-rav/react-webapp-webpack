@@ -1,0 +1,74 @@
+// Variables
+$navbar-height: 55px;
+$navbar-bottom-border: 1px solid $color-black;
+$navbar-background: $color-white;
+$navbar-item-border-width: 4px;
+$navbar-item-color: $color-black;
+$navbar-item-active-color: $blue;
+$navbar-item-border: transparent;
+$navbar-item-active-border: $blue;
+
+.header-navbar {
+  background-color: $navbar-background;
+  border-bottom: $navbar-bottom-border;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+
+  &__navigation {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__logo {
+    display: block;
+    margin-right: 10px;
+  }
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    white-space: nowrap;
+  }
+  &__item {
+    display: block;
+    height: $navbar-height;
+    margin: 0 10px;
+    text-transform: capitalize;
+    color: $navbar-item-color;
+
+    &--link {
+      line-height: $navbar-height;
+      color: $navbar-item-color;
+      border-bottom: $navbar-item-border-width solid $navbar-item-border;
+      text-decoration: none;
+      &.active,
+      &:hover,
+      &:focus {
+        color: $navbar-item-active-color;
+        font-weight: 700;
+        border-bottom-color: $navbar-item-active-border;
+        transition: border-bottom-color 0.3s linear, transform 0.3s linear;
+      }
+    }
+  }
+}
+
+.userprofile {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.u-margin-auto {
+  margin-left: auto;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}

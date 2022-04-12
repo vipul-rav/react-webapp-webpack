@@ -1,0 +1,25 @@
+// =============================================================================
+// _setting.size
+// =============================================================================
+//
+// This unit is used to define a common sizing unit.
+//
+// Utilizing an even number to size and space elements makes scaling for a wide
+// variety of devices (using a vertical rythem) easy and consistent.
+
+$size-value: 6 !default;
+
+// Condensed UI
+
+@if (config-ui-size(condensed) == true) {
+  $size-value: 4;
+}
+
+// Size
+// ====
+// This function takes a size value setting from above and multiplies it,
+// before applying it in a format that can be used elsewhere.
+
+@function size($num) {
+  @return ($num * $size-value) + 0px;
+}

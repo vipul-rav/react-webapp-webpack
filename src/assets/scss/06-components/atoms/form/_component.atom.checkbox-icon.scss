@@ -1,0 +1,229 @@
+// =============================================================================
+/* _component.atom.checkbox-icon */
+// =============================================================================
+//
+// Checkbox icon input styling.
+
+// Component settings
+// ==================
+
+$c-a-checkbox-icon-media-background-color: palette-grey-tint(90) !default;
+$c-a-checkbox-icon-media-background-color-checked: $color-body !default;
+$c-a-checkbox-icon-media-background-color-disabled: palette-grey-tint(90) !default;
+
+$c-a-checkbox-icon-media-border-width: 3px !default;
+$c-a-checkbox-icon-media-border-style: solid !default;
+$c-a-checkbox-icon-media-border-color: palette-grey-tint(80) !default;
+$c-a-checkbox-icon-media-border-color-checked: $color-body !default;
+$c-a-checkbox-icon-media-border-color-disabled: palette-grey-tint(80) !default;
+
+$c-a-checkbox-icon-media-icon-fill: $color-grey !default;
+$c-a-checkbox-icon-media-icon-fill-checked: $color-white !default;
+$c-a-checkbox-icon-media-icon-fill-disabled: palette-grey-tint(40) !default;
+
+$c-a-checkbox-icon-media-radius: 0 !default;
+
+$c-a-checkbox-icon-title-color: $color-body !default;
+$c-a-checkbox-icon-title-color-checked: $color-body !default;
+$c-a-checkbox-icon-title-color-disabled: lighten($color-body, 35%) !default;
+
+$c-a-checkbox-icon-media-radius: 100%;
+
+// .c-a-checkbox-icon
+// ==================
+
+.c-a-checkbox-icon {
+    display: flex;
+    justify-content: center;
+    width: size(15);
+    position: relative;
+
+    input {
+        @extend .u-visually-hidden;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        &:before {
+            content: '';
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // __media
+
+    .c-a-checkbox-icon__media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: size(10);
+        height: size(10);
+        margin-bottom: size(1);
+        border-width: $c-a-checkbox-icon-media-border-width;
+        border-style: $c-a-checkbox-icon-media-border-style;
+        border-color: $c-a-checkbox-icon-media-border-color;
+        border-radius: $c-a-checkbox-icon-media-radius;
+        background-color: $c-a-checkbox-icon-media-background-color;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+        width: size(4);
+        height: size(4);
+        fill: $c-a-checkbox-icon-media-icon-fill;
+    }
+
+    // __body
+
+    .c-a-checkbox-icon__body {
+        user-select: none;
+    }
+
+    // __title
+
+    .c-a-checkbox-icon__title {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 0 size(1);
+        @include font-text(heavy);
+        @extend .o-type-label;
+        color: $c-a-checkbox-icon-title-color;
+    }
+
+    // :focus
+
+    input:focus + label .c-a-checkbox-icon__media {
+        @include focus-add();
+    }
+
+    // .is-checked & :checked
+
+    &.is-checked input + label,
+    input:checked + label {
+        .c-a-checkbox-icon__media {
+            background-color: $c-a-checkbox-icon-media-background-color-checked;
+            border-color: $c-a-checkbox-icon-media-border-color-checked;
+        }
+
+        // .c-a-icon
+
+        .c-a-icon {
+            fill: $c-a-checkbox-icon-media-icon-fill-checked;
+        }
+
+        // __title
+
+        .c-a-checkbox-icon__title {
+            color: $c-a-checkbox-icon-title-color-checked;
+        }
+    }
+
+    // .is-disabled & [disabled]
+
+    &.is-disabled input + label,
+    input[disabled] + label {
+        &:hover {
+            cursor: default;
+        }
+
+        // __media
+
+        .c-a-checkbox-icon__media {
+            background-color: $c-a-checkbox-icon-media-background-color-disabled;
+            border-color: $c-a-checkbox-icon-media-border-color-disabled;
+        }
+
+        // .c-a-icon
+
+        .c-a-icon {
+            fill: $c-a-checkbox-icon-media-icon-fill-disabled;
+        }
+
+        // __title
+
+        .c-a-checkbox-icon__title {
+            color: $c-a-checkbox-icon-title-color-disabled;
+        }
+    }
+
+    // .is-checked & .is-disabled + :checked and [disabled]
+
+    &.is-checked.is-disabled input + label,
+    input:checked[disabled] + label {
+        .c-a-checkbox-icon__media {
+            opacity: 0.5;
+            background-color: $c-a-checkbox-icon-media-background-color-checked;
+            border-color: $c-a-checkbox-icon-media-border-color-checked;
+        }
+
+        // .c-a-icon
+
+        .c-a-icon {
+            fill: $c-a-checkbox-icon-media-icon-fill-checked;
+        }
+    }
+
+    // .has-status-active
+
+    &.has-status-active.is-checked input + label,
+    &.has-status-active input:checked + label {
+        // __media
+
+        .c-a-checkbox-icon__media {
+            background-color: palette-status(active);
+            border-color: palette-status(active);
+        }
+    }
+
+    // .has-status-paused
+
+    &.has-status-paused.is-checked input + label,
+    &.has-status-paused input:checked + label {
+        // __media
+
+        .c-a-checkbox-icon__media {
+            background-color: palette-status(paused);
+            border-color: palette-status(paused);
+        }
+    }
+
+    // .has-status-pending
+
+    &.has-status-pending.is-checked input + label,
+    &.has-status-pending input:checked + label {
+        // __media
+
+        .c-a-checkbox-icon__media {
+            background-color: palette-status(pending);
+            border-color: palette-status(pending);
+        }
+    }
+
+    // .has-status-archived
+
+    &.has-status-archived.is-checked input + label,
+    &.has-status-archived input:checked + label {
+        // __media
+
+        .c-a-checkbox-icon__media {
+            background-color: palette-status(archived);
+            border-color: palette-status(archived);
+        }
+    }
+}

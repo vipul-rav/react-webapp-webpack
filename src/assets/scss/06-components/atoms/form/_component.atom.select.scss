@@ -1,0 +1,174 @@
+// =============================================================================
+/* _component.atom.select */
+// =============================================================================
+//
+// Multi-option select styling.
+
+// Component settings
+// ==================
+
+$c-a-select-background-color: $color-white !default;
+$c-a-select-background-color-disabled: $color-white !default;
+
+$c-a-select-border-width: 1px !default;
+$c-a-select-border-style: solid !default;
+$c-a-select-border-color: $color-body !default;
+$c-a-select-border-color-disabled: mix($color-body, $color-white, 30%) !default;
+
+$c-a-select-color: $color-body !default;
+$c-a-select-color-disabled: mix($color-body, $color-white, 30%) !default;
+
+$c-a-select-control-background-color: $color-white !default;
+$c-a-select-control-background-color-disabled: $color-white !default;
+
+$c-a-select-control-icon-color: palette-primary(1) !default;
+$c-a-select-control-icon-color-disabled: mix($color-body, $color-white, 30%) !default;
+
+$c-a-select-block-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-select-block-border-width: size(0.25) !default;
+$c-a-select-block-border-color: palette-primary(1) !default;
+$c-a-select-block-border-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-select-block-selected-background-color: palette-primary(1) !default;
+
+// .c-a-select
+// ===========
+
+.c-a-select {
+    width: 100%;
+    position: relative;
+  margin-bottom: size(1); 
+
+    select {
+    @include type-responsive(base2);
+        width: 100%;
+        padding: size(1);
+        padding-right: calc(#{block-field(1)} + #{size(1)});
+        height: block-field(1);
+        color: $c-a-select-color;
+        border-width: $c-a-select-border-width;
+        border-style: $c-a-select-border-style;
+        border-color: $c-a-select-border-color;
+        border-radius: $global-radius;
+        background-color: $c-a-select-background-color;
+        appearance: none;
+
+        // Hide the default control in legacy IE
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        // .is-disabled or [disabled]
+
+        &.is-disabled,
+        &[disabled] {
+            color: $c-a-select-color-disabled;
+            border-color: $c-a-select-border-color-disabled;
+            background-color: $c-a-select-background-color-disabled;
+
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+
+    // This psuedo element is used as a control background
+
+  &:after {
+    pointer-events: none;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: block-field(1);
+    height: block-field(1);
+    // border-radius: 0 $global-radius $global-radius 0;
+    // border-width: $c-a-select-border-width;
+    // border-style: $c-a-select-border-style;
+    // border-color: $c-a-select-border-color;
+    // background-color: $c-a-select-control-background-color;
+  }
+
+    // .is-disabled
+
+    &.is-disabled {
+        &:after {
+            background-color: $c-a-select-control-background-color-disabled;
+            border-color: $c-a-select-border-color-disabled;
+        }
+
+        // .c-a-icon
+
+        .c-a-icon {
+            fill: $c-a-select-control-icon-color-disabled;
+        }
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+        pointer-events: none;
+        position: absolute;
+        @include layers(root);
+        speak: none;
+        width: size(3);
+        height: size(3);
+        top: size(1.5);
+        right: size(1.5);
+        fill: $c-a-select-control-icon-color;
+    }
+}
+
+// --block
+
+.c-a-select--block {
+    width: auto;
+    margin-right: size(1);
+    margin-bottom: size(1);
+
+    select {
+        width: auto;
+        padding-left: size(2);
+        padding-right: size(2);
+        border-color: $c-a-select-block-border-color;
+        border-width: $c-a-select-block-border-width;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &[disabled] {
+            color: $c-a-select-block-color-disabled;
+            border-color: $c-a-select-block-border-color-disabled;
+        }
+    }
+
+    &:after {
+        display: none;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+        display: none;
+    }
+
+    // .is-disabled
+
+    &.is-disabled {
+        select {
+            color: $c-a-select-block-color-disabled;
+            border-color: $c-a-select-block-border-color-disabled;
+        }
+    }
+
+    // .is-selected
+
+    &.is-selected {
+        select {
+            background-color: $c-a-select-block-selected-background-color;
+            color: $color-white;
+        }
+    }
+}

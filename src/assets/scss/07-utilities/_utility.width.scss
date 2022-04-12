@@ -1,0 +1,46 @@
+// =============================================================================
+/* _utility.width */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a CSS width property
+// and value for (each) even size using the point grid.
+//
+// Usage:
+//  <div class="u-width-2">
+//    ...
+
+// .u-width
+// ========
+
+.u-width {
+    // Widths based on the size() mixin
+
+    @for $i from 1 through 50 {
+        $width: size(1 * $i);
+
+        &-#{$i} {
+            width: $width !important;
+        }
+    }
+
+    // Full width
+
+    &-full {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: none !important;
+    }
+
+    // Percentage widths
+
+    &-percentage {
+        @for $i from 1 through 100 {
+            // Use the modulus operator to run increments of 5 for each width percentage utility up to the value of 100.
+            @if $i % 5 == 0 {
+                &-#{$i} {
+                    width: #{$i}% !important;
+                }
+            }
+        }
+    }
+}

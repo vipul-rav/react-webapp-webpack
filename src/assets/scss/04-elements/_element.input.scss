@@ -1,0 +1,75 @@
+// =============================================================================
+/* _element.input */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/input
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Change the font styles in all browsers (opinionated) (^).
+// [2] Remove the margin in Firefox and Safari (^).
+// [3] Show the overflow in Edge (^).
+
+input {
+    @include font-text(); // [1]
+    font-size: 100%; // [1]
+    line-height: 1.15; // [1]
+    margin: 0; // [2]
+    overflow: visible; // [3]
+
+    &::-webkit-input-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+    &::-moz-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+    &:-ms-input-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+    &:-moz-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+
+    &:focus {
+        @include focus-add();
+    }
+}
+
+// [1] Add the correct box sizing in IE 10- (^).
+// [2] Remove the padding in IE 10- (^).
+
+[type='checkbox'],
+[type='radio'] {
+    box-sizing: border-box; // [1]
+    padding: 0; // [2]
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto; // (1)
+}
+
+// [1] Correct the odd appearance in Chrome and Safari (^).
+// [2] Correct the outline style in Safari (^).
+
+[type='search'] {
+    appearance: textfield; // [1]
+    outline-offset: -2px; // [2]
+}
+
+// Remove the inner padding and cancel buttons in Chrome and Safari macOS.
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+    appearance: none; // (^)
+}
+
+// [1] Correct the inability to style clickable types in iOS and Safari (^).
+// [2] Change font properties to `inherit` in Safari (^).
+
+::-webkit-file-upload-button {
+    appearance: button; // [1]
+    font: inherit; // [2]
+}

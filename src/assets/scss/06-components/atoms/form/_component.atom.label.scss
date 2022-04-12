@@ -1,0 +1,38 @@
+// =============================================================================
+// _component.atom.label
+// =============================================================================
+//
+// Styling for associated form input labelling.
+
+// Component settings
+// ==================
+
+$c-a-label-color: $color-body !default;
+$c-a-label-supplement-color: palette-grey-tint(30) !default;
+
+// .c-a-label
+// ==========
+
+.c-a-label {
+  @include font-text(Default);
+  @extend .o-type-size-base2;
+  color: $c-a-label-color;
+  line-height: 33px; 
+
+    // __title
+
+    .c-a-label__title {
+        font-weight: bold;
+
+        &:after {
+            content: ' ';
+        }
+    }
+
+    // __supplement
+
+    .c-a-label__supplement {
+        color: $c-a-label-supplement-color;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,26 @@
+// =============================================================================
+/* _utility.top */
+// =============================================================================
+//
+// This utility creates a class that applies a css top property and value.
+//
+// Usage:
+//  <div class="u-top-2">
+//    ...
+
+// .u-top
+// ======
+
+.u-top {
+    &-0 {
+        top: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-#{$i} {
+            top: ($size) !important;
+        }
+    }
+}

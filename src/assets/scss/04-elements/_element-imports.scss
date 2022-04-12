@@ -1,0 +1,77 @@
+// =============================================================================
+// _elements
+// =============================================================================
+//
+// This layer offers very low-specific but slightly opinionated styling on bare,
+// unclassed HTML element (or 'type') selectors only.
+//
+// Once element-level styles are defined here, all additions and deviations
+// should be implemented using classes in subsequent layers.
+//
+// This layer is very rarely added to or changed after initial setup.
+//
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+@import 'element.a';
+@import 'element.abbr';
+@import 'element.article';
+@import 'element.aside';
+@import 'element.audio';
+@import 'element.b';
+@import 'element.blockquote';
+@import 'element.button';
+@import 'element.caption';
+@import 'element.cite';
+@import 'element.code';
+@import 'element.col';
+@import 'element.colgroup';
+@import 'element.dd';
+@import 'element.del';
+@import 'element.dfn';
+@import 'element.dl';
+@import 'element.dt';
+@import 'element.em';
+@import 'element.fieldset';
+@import 'element.figcaption';
+@import 'element.figure';
+@import 'element.footer';
+@import 'element.h1';
+@import 'element.h2';
+@import 'element.h3';
+@import 'element.h4';
+@import 'element.h5';
+@import 'element.h6';
+@import 'element.header';
+@import 'element.hr';
+@import 'element.i';
+@import 'element.iframe';
+@import 'element.img';
+@import 'element.input';
+@import 'element.label';
+@import 'element.legend';
+@import 'element.li';
+@import 'element.main';
+@import 'element.nav';
+@import 'element.ol';
+@import 'element.p';
+@import 'element.pre';
+@import 'element.q';
+@import 'element.s';
+@import 'element.section';
+@import 'element.select';
+@import 'element.small';
+@import 'element.strong';
+@import 'element.sub';
+@import 'element.sup';
+@import 'element.svg';
+@import 'element.table';
+@import 'element.tbody';
+@import 'element.td';
+@import 'element.textarea';
+@import 'element.tfoot';
+@import 'element.th';
+@import 'element.thead';
+@import 'element.tr';
+@import 'element.u';
+@import 'element.ul';
+@import 'element.video';

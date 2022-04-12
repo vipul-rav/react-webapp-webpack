@@ -1,0 +1,26 @@
+// =============================================================================
+/* _utility.bottom */
+// =============================================================================
+//
+// This utility creates a class that applies a css bottom property and value.
+//
+// Usage:
+//  <div class="u-bottom-2">
+//    ...
+
+// .u-bottom
+// =========
+
+.u-bottom {
+    &-0 {
+        bottom: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-#{$i} {
+            bottom: ($size) !important;
+        }
+    }
+}

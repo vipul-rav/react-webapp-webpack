@@ -1,0 +1,20 @@
+// =============================================================================
+// _tool.clearfix
+// =============================================================================
+//
+// Clearfix is generally used in float based layout.
+
+// Clearfix
+// ========
+// Clearfix is a way for an element to automatically clear its child elements,
+// so that there is no need for any additional markup.
+// Usage:
+//   .selector { @include clearfix() }
+
+@mixin clearfix() {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

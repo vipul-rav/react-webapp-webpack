@@ -1,0 +1,61 @@
+// =============================================================================
+/* _utility.color */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// color property and value, based on previosuly defined colors.
+
+.u-color {
+  // Inherit
+
+  &-inherit {
+    color: inherit !important;
+  }
+
+  // Core
+
+  &-white {
+    color: $color-white !important;
+  }
+  &-black {
+    color: $color-black !important;
+  }
+  &-grey {
+    color: $color-grey !important;
+  }
+  &-body {
+    color: $color-body !important;
+  }
+
+  // Primary
+
+  @each $key, $value in ($color-primary) {
+    &-primary-#{$key} {
+      color: $value !important;
+    }
+  }
+
+  // Theme1
+
+  @each $key, $value in ($color-theme) {
+    &-theme1-#{$key} {
+      color: $value !important;
+    }
+  }
+
+  // Default
+
+  @each $key, $value in ($color-default) {
+    &default#{$key} {
+      color: $value !important;
+    }
+  }
+
+  // Utility
+
+  @each $key, $value in ($color-utility) {
+    &-utility-#{$key} {
+      color: $value !important;
+    }
+  }
+}

@@ -1,3 +1,13 @@
+@import '01-settings/setting-imports';
+@import '02-tools/tool-imports';
+@import '03-generics/generic-imports';
+@import '04-elements/element-imports';
+@import '05-objects/object-imports';
+@import '06-components/atoms/component.atom-imports';
+@import '06-components/molecules/component.molecule-imports';
+@import '06-components/organisms/component.organism-imports';
+@import '07-utilities/utility-imports';
+
 #preloader {
   position: fixed;
   top: 0;
@@ -53,26 +63,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-button {
-  font-family: 'Source-Sans-Pro Text', Arial, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 100%;
-  margin: 0;
-  color: #5e9ed6;
-  overflow: visible;
-  text-transform: none;
-  border: black;
-  padding: 8px;
-  border-color: #5e9ed6;
-  border-style: solid;
-  margin: 4px 4px 4px 4px;
-}
-button:hover {
-  cursor: pointer;
-}
-button:focus {
-  outline: 0;
-  box-shadow: 0 0 0 2px #5e9ed6;
 }

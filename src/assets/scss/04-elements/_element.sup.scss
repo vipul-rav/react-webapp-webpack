@@ -1,0 +1,15 @@
+// =============================================================================
+/* _element.sup */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/sup
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+sup {
+    font-size: 75%; // (^)
+    line-height: 0; // (^)
+    position: relative; // (^)
+    vertical-align: baseline; // (^)
+    top: -0.5em; // (^)
+}

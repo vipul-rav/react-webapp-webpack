@@ -1,0 +1,20 @@
+html {
+  font-size: $core-font-size; // [1]
+  min-width: $core-min-size-width; // [2]
+  text-size-adjust: 100%; // [3]
+  background-color: get-base-colour(f);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // [4]
+}
+
+// Body styling
+// ============
+// [1] Set common font family, weight and style properties.
+// [2] Set up responsive typography sizes.
+// [3] Set a default color for content.
+
+body {
+  @include font-text(); // [1]
+  @include type-responsive(base2); // [2]
+  color: $color-body; // [3]
+  padding-top: 0.5rem;
+}

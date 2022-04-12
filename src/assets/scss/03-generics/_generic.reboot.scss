@@ -1,0 +1,57 @@
+// =============================================================================
+/* _generic.reboot */
+// =============================================================================
+//
+// Shared reboot styles on global and grouped tags.
+
+// Box sizing
+// ==========
+// Set global box-sizing to border-box to help with box model style updates.
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+// Shared elements
+// ===============
+// Reset margins and paddings on some common elements.
+//
+// Note: Each element will have it's own opportunity to reboot at low
+// specificity within the elements layer.
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+legend,
+table,
+thead,
+tbody,
+tfoot,
+th,
+td,
+caption,
+hr {
+    margin: 0;
+    padding: 0;
+}

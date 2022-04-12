@@ -1,0 +1,26 @@
+// =============================================================================
+// _component.atom.field-helper
+// =============================================================================
+//
+// Styling for field helpers.
+
+// Component settings
+// ==================
+
+// .c-a-field-helper
+// =================
+
+.c-a-field-helper {
+    @extend .o-type-size-base2;
+
+    p {
+        margin-bottom: size(1);
+
+        &:first-child {
+            margin-top: size(1);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

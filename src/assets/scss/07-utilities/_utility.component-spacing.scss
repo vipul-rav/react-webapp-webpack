@@ -1,0 +1,17 @@
+// =============================================================================
+/* _utility.component-spacing */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a margin property
+// and value for spacing components.
+//
+// Usage:
+//  <div class="u-component-spacing">
+//    ...
+
+// .u-component-spacing
+// ====================
+
+.u-component-spacing {
+    margin-bottom: $global-component-spacing !important;
+}

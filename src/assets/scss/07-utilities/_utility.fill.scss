@@ -1,0 +1,81 @@
+// =============================================================================
+/* _utility.fill */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// fill property and value, based on previosuly defined colors.
+
+// .u-fill
+// ========
+
+.u-fill {
+  // Core
+
+  &-white,
+  &-white-all * {
+    fill: $color-white !important;
+  }
+
+  &-black,
+  &-black-all * {
+    fill: $color-black !important;
+  }
+
+  &-grey,
+  &-grey-all * {
+    fill: $color-grey !important;
+  }
+
+  &-body,
+  &-body-all * {
+    fill: $color-body !important;
+  }
+
+  // Grey (tint)
+
+  @each $key, $value in ($color-grey-tint) {
+    &-grey-tint-#{$key} {
+      fill: $value !important;
+    }
+  }
+
+  // Grey (shade)
+
+  @each $key, $value in ($color-grey-shade) {
+    &-grey-shade-#{$key} {
+      fill: $value !important;
+    }
+  }
+
+  // Primary
+
+  @each $key, $value in ($color-primary) {
+    &-primary-#{$key} {
+      fill: $value !important;
+    }
+  }
+
+  //
+
+  @each $key, $value in ($color-theme) {
+    &-theme1-#{$key} {
+      fill: $value !important;
+    }
+  }
+
+  //
+
+  @each $key, $value in ($color-default) {
+    &default#{$key} {
+      fill: $value !important;
+    }
+  }
+
+  // Utility
+
+  @each $key, $value in ($color-utility) {
+    &-utility-#{$key} {
+      fill: $value !important;
+    }
+  }
+}

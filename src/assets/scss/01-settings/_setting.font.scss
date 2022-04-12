@@ -1,0 +1,52 @@
+// =============================================================================
+// _setting.font
+// =============================================================================
+//
+// Custom fonts are referenced here either by name and source as part of the
+// codebase or by linking to an external source using an @import rule.
+
+// Text fonts
+// ==========
+
+// Text (Default)
+$base-font-path: '../';
+@if ($env == 'development') {
+  $base-font-path: '../../';
+}
+
+$font-text-src: $base-font-path + 'font/sf-display-regular';
+$font-text-name: 'SF Font';
+$font-text-weight: '300';
+$font-text-style: 'normal';
+
+// Text (Heavy)
+
+$font-text-heavy-src: $base-font-path + 'font/sf-display-bold';
+$font-text-heavy-name: 'SF Font Bold';
+$font-text-heavy-weight: '700';
+$font-text-heavy-style: 'bold';
+
+// Text (Fallback)
+
+$font-text-fallback: 'Arial, sans-serif';
+
+// Display fonts
+// =============
+
+// Display (Default)
+
+$font-display-src: $base-font-path + 'font/sf-display-regular';
+$font-display-name: 'SF Font Display';
+$font-display-weight: '300';
+$font-display-style: 'normal';
+
+// Display (Heavy)
+
+$font-display-heavy-src: $base-font-path + 'font/sf-display-bold';
+$font-display-heavy-name: 'SF Font Display Bold';
+$font-display-heavy-weight: '700';
+$font-display-heavy-style: 'normal';
+
+// Display (Fallback)
+
+$font-display-fallback: 'Arial, sans-serif';

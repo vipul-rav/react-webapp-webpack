@@ -1,0 +1,20 @@
+// Variables
+$cards-background: $color-white;
+$cards-border: 1px solid $blue;
+$cards-radius: 0.25rem;
+$padding: 1.313rem;
+$margin-bottom: 1rem;
+
+.card__content {
+  background-color: $cards-background;
+  border: $cards-border;
+  border-radius: $cards-radius;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $margin-bottom;
+
+  &__body {
+    padding: $padding;
+  }
+}

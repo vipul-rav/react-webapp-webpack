@@ -1,0 +1,73 @@
+// =============================================================================
+/* _component.atom.input-icon-prompt */
+// =============================================================================
+//
+// Icon prompts are used to visually aid a user with completion of an input.
+
+// Component settings
+// ==================
+
+$c-a-input-icon-prompt-background-color: $color-white !default;
+$c-a-input-icon-prompt-background-color-disabled: $color-white !default;
+
+$c-a-input-icon-prompt-border-width: 1px !default;
+$c-a-input-icon-prompt-border-style: solid !default;
+$c-a-input-icon-prompt-border-color: $color-body !default;
+$c-a-input-icon-prompt-border-color-disabled: mix($color-body, $color-white, 30%) !default;
+
+$c-a-input-icon-prompt-icon-fill: $color-body !default;
+$c-a-input-icon-prompt-icon-fill-disabled: mix($color-body, $color-white, 30%) !default;
+
+// .c-a-input-icon-prompt
+// ======================
+
+.c-a-input-icon-prompt {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: block-field(1);
+    height: block-field(1);
+    position: relative;
+    background-color: $c-a-input-icon-prompt-background-color;
+    border-width: $c-a-input-icon-prompt-border-width;
+    border-style: $c-a-input-icon-prompt-border-style;
+    border-color: $c-a-input-icon-prompt-border-color;
+
+    // .c-a-icon
+
+    .c-a-icon {
+        fill: $c-a-input-icon-prompt-icon-fill;
+        width: size(3);
+        height: size(3);
+    }
+
+    // .is-disabled
+
+    &.is-disabled {
+        background-color: $c-a-input-icon-prompt-background-color-disabled;
+        border-color: $c-a-input-icon-prompt-border-color-disabled;
+
+        // .c-a-icon
+
+        .c-a-icon {
+            fill: $c-a-input-icon-prompt-icon-fill-disabled;
+        }
+    }
+}
+
+// --prefix
+
+.c-a-input-icon-prompt--prefix {
+    border-right: none;
+    justify-content: center;
+    border-radius: $global-radius 0 0 $global-radius;
+}
+
+// --suffix
+
+.c-a-input-icon-prompt--suffix {
+    border-left: none;
+    justify-content: center;
+    border-radius: 0 $global-radius $global-radius 0;
+}

@@ -1,0 +1,21 @@
+// =============================================================================
+/* _utility.table-layout */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// table-layout property and value.
+//
+// Usage:
+//  <div class="u-table-layout-fixed">
+//    ...
+
+// .u-table-layout
+// ===============
+
+.u-table-layout {
+    // Fixed
+
+    &-fixed {
+        table-layout: fixed !important;
+    }
+}

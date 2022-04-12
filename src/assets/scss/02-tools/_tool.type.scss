@@ -1,0 +1,28 @@
+// =============================================================================
+// _tool.type
+// =============================================================================
+//
+// These tools are used to set up responsive typography sizes and line heights.
+
+// Type setup
+// ==========
+// This tool iterates over maps to set up font sizes and associated line heights.
+
+@mixin type-setup($type-name, $breakpoint) {
+    font-size: map-get(map-get(map-get($type-size, $type-name), $breakpoint), font-size) + 0px;
+    line-height: map-get(map-get(map-get($type-size, $type-name), $breakpoint), line-height) + 0px;
+}
+
+// Type responsive
+// ===============
+// This tool iterates over maps to set up type at different breakpoints widths,
+// based on previous settings.
+
+@mixin type-responsive($type-name) {
+    @each $breakpoint in $breakpoint-groups {
+        $key: nth($breakpoint, 1);
+        @include media-breakpoint-up($key) {
+            @include type-setup($type-name, $key);
+        }
+    }
+}

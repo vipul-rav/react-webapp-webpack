@@ -1,0 +1,17 @@
+{
+  "exampleA": "an example content item",
+  "exampleB": "another example content item",
+  "loaderTitle": "Loader",
+  "loaderBody": "Please do not close your browser",
+  "errorHeader": "Sorry, There is some technical error",
+  "errorText": "It looks like something's gone wrong in the background.",
+  "ExitText": "Exit",
+  "btnContinue": "Continue",
+  "externalContent": "Please wait....",
+  "homePageText": "Home Page",
+  "postListHeader": "A sample component for post List: ",
+  "searchResultHeader": "Application search Result",
+  "noSearchMessage": "Click search to display application result.",
+  "userName": "User Name:",
+  "searchHeader": "Application Search"
+}

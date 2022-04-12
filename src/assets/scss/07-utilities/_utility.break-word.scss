@@ -1,0 +1,49 @@
+// =============================================================================
+/* _utility.break-word */
+// =============================================================================
+//
+// Used sparingly, this utility creates a class that applies css properties
+// and values that stop text content potentially overflowing it's content box.
+//
+// Usage:
+//  <span class="u-break-word">Supercalifragilisticexpialidocious</span>
+
+// Utility tool
+// ============
+
+// [1] Insert line breaks wherever the text would otherwise overflow its content box.
+// [2] Block level display properties need applied applied for elements that are inline by default.
+// [3] A default max-width needs applied where it hasn't already been set.
+// [4] The following direct descendant wildcard will catch any inner elements (e.g. <strong>, <em>).
+
+@mixin break-word() {
+    word-break: break-word !important; // [1]
+    word-wrap: break-word !important; // [1]
+    display: inline-block; // [2]
+    max-width: 100%; // [3]
+}
+
+@mixin break-word-block() {
+    word-break: break-word !important; // [1]
+    word-wrap: break-word !important; // [1]
+    max-width: 100%; // [3]
+}
+
+// .u-break-word
+// =============
+
+.u-break-word {
+    @include break-word();
+
+    * {
+        @include break-word(); // [4]
+    }
+}
+
+.u-break-word--block {
+    @include break-word-block();
+
+    * {
+        @include break-word-block(); // [4]
+    }
+}

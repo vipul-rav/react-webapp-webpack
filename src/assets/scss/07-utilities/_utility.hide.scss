@@ -1,0 +1,39 @@
+// =============================================================================
+/* _utility.hide */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css display
+// property and value.
+//
+// Usage:
+//  <div class="u-hide-sm1">
+//    ...
+
+// .u-hide
+// =======
+
+.u-hide {
+    display: none !important;
+
+    // -#{$key}-up
+
+    @each $breakpoint, $num in ($grid-breakpoints) {
+        $key: nth($breakpoint, 1);
+        @include media-breakpoint-up($key) {
+            &-#{$key}-up {
+                display: none !important;
+            }
+        }
+    }
+
+    // -#{$key}-down
+
+    @each $breakpoint, $num in ($grid-breakpoints) {
+        $key: nth($breakpoint, 1);
+        @include media-breakpoint-down($key) {
+            &-#{$key}-down {
+                display: none !important;
+            }
+        }
+    }
+}

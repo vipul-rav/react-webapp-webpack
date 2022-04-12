@@ -1,0 +1,36 @@
+// =============================================================================
+/* _element.textarea */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/textarea
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Change the font styles in all browsers (opinionated) (^)
+// [2] Remove the margin in Firefox and Safari (^)
+// [3] Remove the default vertical scrollbar in IE (^)
+
+textarea {
+    @include font-text(); // [1]
+    font-size: 100%; // [1]
+    line-height: 1.15; // [1]
+    margin: 0; // [2]
+    overflow: auto; // [3]
+
+    &::-webkit-input-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+    &::-moz-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+    &:-ms-input-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+    &:-moz-placeholder {
+        color: mix($color-body, $color-white, 30%);
+    }
+
+    &:focus {
+        @include focus-add();
+    }
+}

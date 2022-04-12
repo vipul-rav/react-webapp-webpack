@@ -1,0 +1,26 @@
+// =============================================================================
+/* _utility.z-index */
+// =============================================================================
+//
+// This utility creates a class that applies a css z-index property and value.
+//
+// Usage:
+//  <div class="u-z-index-2">
+//    ...
+
+// .u-z-index
+// ==========
+
+.u-z-index {
+    &-0 {
+        z-index: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $value: $i;
+
+        &-#{$i} {
+            z-index: ($value) !important;
+        }
+    }
+}

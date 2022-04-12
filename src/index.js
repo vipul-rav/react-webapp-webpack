@@ -1,4 +1,3 @@
-//import '@babel/polyfill';
 import 'regenerator-runtime/runtime';
 import 'core-js/stable';
 import 'whatwg-fetch';

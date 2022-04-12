@@ -1,0 +1,46 @@
+// =============================================================================
+/* _components.atoms */
+// =============================================================================
+//
+// Using principles of Atomic Design, Atoms are the most basic building block
+// of component UI. Each atom has distinct properties that can’t be broken down
+// further without losing their meaning.
+//
+// As a component, this layer is where recognisable pieces of UI are stlyed
+// using classes.
+
+// Form
+// ====
+@import 'form/component.atom.button';
+@import 'form/component.atom.checkbox';
+@import 'form/component.atom.checkbox-icon';
+@import 'form/component.atom.checkbox-toggle';
+@import 'form/component.atom.field-description';
+@import 'form/component.atom.field-helper';
+@import 'form/component.atom.input';
+@import 'form/component.atom.input-range';
+@import 'form/component.atom.input-icon-control';
+@import 'form/component.atom.input-icon-prompt';
+@import 'form/component.atom.input-text-prompt';
+@import 'form/component.atom.label';
+@import 'form/component.atom.radio';
+@import 'form/component.atom.radio-card';
+@import 'form/component.atom.select';
+@import 'form/component.atom.textarea';
+
+// Text
+// ====
+
+@import 'text/component.atom.text-body-label';
+@import 'text/component.atom.text-body-large';
+@import 'text/component.atom.text-label';
+@import 'text/component.atom.text-title';
+
+//breadcrumbs
+@import 'breadcrumbs/component.atom.breadcrumbs';
+
+//header
+@import 'header/component.atom.header';
+
+//cards
+@import 'cards/component.atom.cards';

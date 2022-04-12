@@ -1,0 +1,266 @@
+// =============================================================================
+/* _component.atom.radio-card */
+// =============================================================================
+//
+// Radio input styling.
+
+// Component settings
+// ==================
+
+$c-a-radio-card-background-color: $color-white !default;
+$c-a-radio-card-background-color-checked: get-theme-colour(pebble) !default;
+$c-a-radio-card-background-color-disabled: $color-white !default;
+$c-a-radio-card-background-color-checked-disabled: $color-white !default;
+
+$c-a-radio-card-control-background-color: $color-white !default;
+$c-a-radio-card-control-background-color-checked: $color-white !default;
+$c-a-radio-card-control-background-color-disabled: mix($color-body, $color-white, 10%) !default;
+$c-a-radio-card-control-background-color-checked-disabled: mix($color-body, $color-white, 10%) !default;
+
+$c-a-radio-card-control-border-width: size(0.25) !default;
+$c-a-radio-card-control-border-style: solid !default;
+$c-a-radio-card-control-border-color: palette-primary(1) !default;
+$c-a-radio-card-control-border-color-checked: palette-primary(1) !default;
+$c-a-radio-card-control-border-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-card-control-border-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-card-control-fill: $color-white !default;
+$c-a-radio-card-control-fill-checked: palette-primary(1) !default;
+$c-a-radio-card-control-fill-disabled: transparent !default;
+$c-a-radio-card-control-fill-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-card-label-border-width: size(0.25) !default;
+$c-a-radio-card-label-border-style: solid !default;
+$c-a-radio-card-label-border-color: get-theme-colour(pebble) !default;
+$c-a-radio-card-label-border-color-checked: get-theme-colour(pebble) !default;
+$c-a-radio-card-label-border-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-card-label-border-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+$c-a-radio-card-content-color: $color-body !default;
+$c-a-radio-card-content-color-checked: $color-body !default;
+$c-a-radio-card-content-color-disabled: mix($color-body, $color-white, 80%) !default;
+$c-a-radio-card-content-color-checked-disabled: mix($color-body, $color-white, 80%) !default;
+
+// theme1
+
+@if (config-theme(theme1) == true) {
+}
+
+// theme2
+
+@if (config-theme(theme2) == true) {
+}
+
+// theme3
+
+@if (config-theme(theme3) == true) {
+}
+
+// .c-a-radio-card
+// ===============
+
+.c-a-radio-card {
+  // __control
+
+  .c-a-radio-card__control {
+    position: relative;
+
+    input {
+      @extend .u-visually-hidden;
+    }
+
+    label {
+      display: flex;
+      width: 100%;
+      min-height: block-field(1);
+      padding: size(2);
+      margin-bottom: -($c-a-radio-card-label-border-width);
+      border-width: $c-a-radio-card-label-border-width;
+      border-style: $c-a-radio-card-label-border-style;
+      border-color: $c-a-radio-card-label-border-color;
+      border-radius: $global-radius;
+      background-color: $c-a-radio-card-background-color;
+
+      &:before {
+        content: '';
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  // __body
+
+  .c-a-radio-card__body {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    // .c-a-icon
+
+    > .c-a-icon {
+      display: block;
+      position: absolute;
+      top: calc(50% - #{size(1.5)});
+      left: size(2);
+      width: size(4);
+      height: size(4);
+      fill: $c-a-radio-card-control-fill;
+      border-radius: 100%;
+      border-width: $c-a-radio-card-control-border-width;
+      border-style: $c-a-radio-card-control-border-style;
+      border-color: $c-a-radio-card-control-border-color;
+      background-color: $c-a-radio-card-control-background-color;
+    }
+  }
+
+  // __content
+
+  .c-a-radio-card__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: size(5.5);
+    color: $c-a-radio-card-content-color;
+  }
+
+  // __content-heading
+
+  .c-a-radio-card__content-heading {
+    @extend .u-type-size-base4;
+    @include font-text(heavy);
+  }
+
+  // __content-summary
+
+  .c-a-radio-card__content-summary {
+  }
+
+  // __media
+
+  .c-a-radio-card__media {
+    margin-left: size(2);
+    display: none;
+
+    img {
+      height: size(12);
+      display: block;
+    }
+
+    @include media-breakpoint-up(sm1) {
+      display: block;
+    }
+  }
+
+  // __footer
+
+  .c-a-radio-card__footer {
+    display: flex;
+    background-color: mix(get-theme-colour(pebble), $color-white, 50%);
+    padding: size(1);
+    flex-direction: column;
+
+    @include media-breakpoint-up(sm1) {
+      padding: size(1.5) size(1);
+      flex-direction: row;
+    }
+
+    // .c-a-radio--block, .c-a-checkbox--block
+
+    .c-a-radio--block,
+    .c-a-checkbox--block {
+      margin: size(0.5) 0;
+
+      @include media-breakpoint-up(sm1) {
+        flex: 1;
+        margin: 0 size(0.5);
+      }
+    }
+  }
+
+  // :focus
+
+  .c-a-radio-card__control input:focus + label .c-a-icon {
+    @include focus-add();
+  }
+
+  // .is-checked & :checked
+
+  &.is-checked .c-a-radio-card__control input + label,
+  .c-a-radio-card__control input:checked + label {
+    background-color: $c-a-radio-card-background-color-checked;
+    border-color: $c-a-radio-card-label-border-color-checked;
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-radio-card-control-fill-checked;
+      border-color: $c-a-radio-card-control-border-color-checked;
+      background-color: $c-a-radio-card-control-background-color-checked;
+    }
+
+    // __title
+
+    .c-a-radio-card__title {
+      color: $c-a-radio-card-content-color-checked;
+    }
+  }
+
+  // .is-disabled & [disabled]
+
+  &.is-disabled .c-a-radio-card__control input + label,
+  .c-a-radio-card__control input[disabled] + label {
+    background-color: $c-a-radio-card-background-color-disabled;
+    border-color: $c-a-radio-card-label-border-color-disabled;
+
+    &:hover {
+      cursor: default;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-radio-card-control-fill-disabled;
+      border-color: $c-a-radio-card-control-border-color-disabled;
+      background-color: $c-a-radio-card-control-background-color-disabled;
+    }
+
+    // __title
+
+    .c-a-radio-card__title {
+      color: $c-a-radio-card-content-color-disabled;
+    }
+  }
+
+  // .is-checked & .is-disabled + :checked and [disabled]
+
+  &.is-disabled.is-checked .c-a-radio-card__control input + label,
+  .c-a-radio-card__control input:checked[disabled] + label {
+    background-color: $c-a-radio-card-background-color-checked-disabled;
+    border-color: $c-a-radio-card-label-border-color-checked-disabled;
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-radio-card-control-fill-checked-disabled;
+      border-color: $c-a-radio-card-control-border-color-checked-disabled;
+      background-color: $c-a-radio-card-control-background-color-checked-disabled;
+    }
+
+    // __title
+
+    .c-a-radio-card__title {
+      color: $c-a-radio-card-content-color-checked-disabled;
+    }
+  }
+}

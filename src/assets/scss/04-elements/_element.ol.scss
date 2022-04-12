@@ -1,0 +1,15 @@
+// =============================================================================
+/* _element.ol */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/ol
+
+ol {
+    margin-bottom: size(2);
+    padding-left: size(3);
+
+    ol {
+        margin-bottom: 0;
+        padding-left: size(2);
+    }
+}

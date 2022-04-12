@@ -1,0 +1,15 @@
+// =============================================================================
+/* _component.atom.text-body-label */
+// =============================================================================
+
+// Component settings
+// ==================
+
+// .c-a-text-body-label
+// ====================
+
+.c-a-text-body-label {
+    @include font-text(heavy);
+    @extend .o-type-size-base3;
+    @extend .o-type-label;
+}

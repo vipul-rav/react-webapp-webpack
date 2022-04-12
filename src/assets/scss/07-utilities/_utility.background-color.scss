@@ -1,0 +1,74 @@
+// =============================================================================
+/* _utility.background-color */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// background-color property and value, based on previosuly defined colors.
+
+// .u-background-color
+// ===================
+
+.u-background-color {
+  // Core
+
+  &-white {
+    background-color: $color-white !important;
+  }
+  &-black {
+    background-color: $color-black !important;
+  }
+  &-grey {
+    background-color: $color-grey !important;
+  }
+  &-body {
+    background-color: $color-body !important;
+  }
+
+  // Grey (tint)
+
+  @each $key, $value in ($color-grey-tint) {
+    &-grey-tint-#{$key} {
+      background-color: $value !important;
+    }
+  }
+
+  // Grey (shade)
+
+  @each $key, $value in ($color-grey-shade) {
+    &-grey-shade-#{$key} {
+      background-color: $value !important;
+    }
+  }
+
+  // Primary
+
+  @each $key, $value in ($color-primary) {
+    &-primary-#{$key} {
+      background-color: $value !important;
+    }
+  }
+
+  // theme1
+
+  @each $key, $value in ($color-theme) {
+    &-theme1-#{$key} {
+      background-color: $value !important;
+    }
+  }
+
+  // default
+
+  @each $key, $value in ($color-default) {
+    &-default-#{$key} {
+      background-color: $value !important;
+    }
+  }
+
+  // Utility
+
+  @each $key, $value in ($color-utility) {
+    &-utility-#{$key} {
+      background-color: $value !important;
+    }
+  }
+}

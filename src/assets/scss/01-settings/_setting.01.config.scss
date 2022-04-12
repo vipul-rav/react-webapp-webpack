@@ -1,0 +1,15 @@
+// =============================================================================
+// _setting.config
+// =============================================================================
+
+// UI size config
+// ==============
+// Used to modify the size of UI.
+
+$config-ui-size: (
+  condensed: false
+) !default;
+
+@function config-ui-size($key) {
+  @return map-get($config-ui-size, $key);
+}

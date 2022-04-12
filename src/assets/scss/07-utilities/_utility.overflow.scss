@@ -1,0 +1,63 @@
+// =============================================================================
+/* _utility.overflow */
+// =============================================================================
+//
+// This utility creates a single purpose class that is used to set overflow
+// properities and values.
+//
+// Usage:
+//  <div class="u-overflow-scroll">
+//    ...
+
+// .u-overflow
+// ===========
+
+.u-overflow {
+    // scroll
+
+    &-scroll {
+        overflow: scroll;
+    }
+    &-x-scroll {
+        overflow-x: scroll;
+    }
+    &-y-scroll {
+        overflow-y: scroll;
+    }
+
+    // hidden
+
+    &-hidden {
+        overflow: hidden;
+    }
+    &-x-hidden {
+        overflow-x: hidden;
+    }
+    &-y-hidden {
+        overflow-y: hidden;
+    }
+
+    // auto
+
+    &-auto {
+        overflow: auto;
+    }
+    &-x-auto {
+        overflow-x: auto;
+    }
+    &-y-auto {
+        overflow-y: auto;
+    }
+
+    // visible
+
+    &-visible {
+        overflow: visible;
+    }
+    &-x-visible {
+        overflow-x: visible;
+    }
+    &-y-visible {
+        overflow-y: visible;
+    }
+}

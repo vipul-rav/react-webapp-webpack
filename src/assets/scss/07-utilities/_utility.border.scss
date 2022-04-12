@@ -1,0 +1,17 @@
+// =============================================================================
+/* _utility.border */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// border property and value.
+//
+// Usage:
+//  <div class="u-border-width-0">
+//    ...
+
+// .u-border
+// =========
+
+.u-border-0 {
+    border: 0 !important;
+}

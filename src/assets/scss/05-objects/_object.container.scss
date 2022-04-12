@@ -1,0 +1,57 @@
+// =============================================================================
+/* _object.container */
+// =============================================================================
+//
+// This implementation is forked from boostrap v4.0.0-alpha.5.
+
+// .container
+// ==========
+// At different breakpoints [1], adjustment the container padding [2].
+
+@if $grid-classes-enabled {
+    .container {
+        @include make-container();
+        @include make-container-max-widths();
+    }
+}
+
+.container {
+    @each $breakpoint in $container-padding {
+        // [1]
+        $key: nth($breakpoint, 1);
+        @include container-padding($key); // [2]
+    }
+}
+
+.container {
+    @each $key, $value in $container-custom-widths {
+        $key: nth($key, 1);
+        &--#{$key} {
+            max-width: $value;
+            @each $key, $value in $breakpoint-groups {
+                @include media-breakpoint-up($key) {
+                    &-#{$key} {
+                        max-width: $value;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .container-fluid
+// ================
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full-width layouts.
+
+@if $grid-classes-enabled {
+    .container-fluid {
+        @include make-container();
+    }
+}
+
+.container--section-workflow {
+    background: $color-white;
+    border-radius: $global-radius;
+    padding: size(2);
+}

@@ -1,0 +1,11 @@
+// =============================================================================
+/* _element.h4 */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/h4
+
+h4 {
+    @include font-display(heavy);
+    @extend .o-type-size-base4;
+    margin-bottom: size(2);
+}

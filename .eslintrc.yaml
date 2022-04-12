@@ -1,5 +1,5 @@
 extends:
-  - './eslint-config/.eslintrc.yaml'
+  - './config/eslint/.eslintrc.yaml'
 # Project specific override rules may appear here
 
 # rules:

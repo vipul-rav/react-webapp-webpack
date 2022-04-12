@@ -1,0 +1,757 @@
+// =============================================================================
+// _component.atom.button
+// =============================================================================
+//
+// Visual button styling for anchor tag, button tag and faux button styling.
+
+// Component settings
+// ==================
+
+// Default
+
+$c-a-button-background-color: get-base-colour(6) !default;
+$c-a-button-background-color-hover: get-base-colour(5) !default;
+$c-a-button-background-color-active: get-base-colour(4) !default;
+
+$c-a-button-border-width: size(0.25) !default;
+$c-a-button-border-style: solid !default;
+$c-a-button-border-color: get-base-colour(4) !default;
+$c-a-button-border-color-hover: get-base-colour(3) !default;
+$c-a-button-border-color-active: get-base-colour(2) !default;
+
+$c-a-button-title-color: palette-primary(1) !default;
+$c-a-button-title-color-hover: palette-primary(1) !default;
+$c-a-button-title-color-active: palette-primary(1) !default;
+$c-a-button-title-color-disabled: palette-grey-tint(10) !default;
+
+$c-a-button-icon-color: palette-primary(1) !default;
+$c-a-button-icon-color-hover: palette-primary(1) !default;
+$c-a-button-icon-color-active: palette-primary(1) !default;
+$c-a-button-icon-color-disabled: palette-grey-tint(10) !default;
+
+$c-a-button-hover-offset: -1px !default;
+
+// Primary
+
+$c-a-button-primary-background-color: palette-primary(1) !default;
+$c-a-button-primary-background-color-hover: mix(palette-primary(1), $color-white, 90%) !default;
+$c-a-button-primary-background-color-active: mix($color-black, palette-primary(1), 30%) !default;
+$c-a-button-primary-background-color-disabled: palette-grey-tint(10) !default;
+
+$c-a-button-primary-border-width: size(0.25) !default;
+$c-a-button-primary-border-style: solid !default;
+$c-a-button-primary-border-color: mix($color-black, palette-primary(1), 30%) !default;
+$c-a-button-primary-border-color-hover: mix($color-black, palette-primary(1), 30%) !default;
+$c-a-button-primary-border-color-active: mix($color-black, palette-primary(1), 30%) !default;
+
+$c-a-button-primary-title-color: $color-white !default;
+$c-a-button-primary-title-color-hover: $color-white !default;
+$c-a-button-primary-title-color-active: $color-white !default;
+$c-a-button-primary-title-color-disabled: $color-white !default;
+
+$c-a-button-primary-icon-color: $color-white !default;
+$c-a-button-primary-icon-color-hover: $color-white !default;
+$c-a-button-primary-icon-color-active: $color-white !default;
+$c-a-button-primary-icon-color-disabled: $color-white !default;
+
+// Secondary
+
+$c-a-button-secondary-background-color: transparent !default;
+$c-a-button-secondary-background-color-hover: $color-white !default;
+$c-a-button-secondary-background-color-active: transparent !default;
+$c-a-button-secondary-background-color-disabled: transparent !default;
+
+$c-a-button-secondary-border-width: size(0.25) !default;
+$c-a-button-secondary-border-style: solid !default;
+$c-a-button-secondary-border-color: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-border-color-hover: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-border-color-active: mix($color-black, palette-primary(1), 30%) !default;
+$c-a-button-secondary-border-color-disabled: palette-grey-tint(10) !default;
+
+$c-a-button-secondary-title-color: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-title-color-hover: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-title-color-active: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-title-color-disabled: palette-grey-tint(10) !default;
+
+$c-a-button-secondary-icon-color: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-icon-color-hover: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-icon-color-active: mix($color-black, palette-primary(1), 10%) !default;
+$c-a-button-secondary-icon-color-disabled: palette-grey-tint(10) !default;
+
+// White
+
+$c-a-button-white-background-color: transparent !default;
+$c-a-button-white-background-color-hover: rgba($color-black, 0.15) !default;
+$c-a-button-white-background-color-active: $color-white !default;
+
+$c-a-button-white-border-width: size(0.25) !default;
+$c-a-button-white-border-style: solid !default;
+$c-a-button-white-border-color: $color-white !default;
+$c-a-button-white-border-color-hover: $color-white !default;
+$c-a-button-white-border-color-active: $color-white !default;
+
+$c-a-button-white-title-color: $blue !default;
+$c-a-button-white-title-color-hover: $dark-blue !default;
+$c-a-button-white-title-color-active: $color-black !default;
+
+$c-a-button-white-icon-color: $blue !default;
+$c-a-button-white-icon-color-hover: $dark-blue !default;
+$c-a-button-white-icon-color-active: $color-black !default;
+
+$c-a-button-primary-background-color-hover: get-theme-colour(palette-primary(1));
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// .c-a-button
+// ===========
+
+.c-a-button {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  padding: size(0.5) size(1);
+  min-width: block-field(1);
+  height: 0;
+  min-height: size(6);
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //border-radius: $global-radius;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+      transform 0.1s ease-in-out;
+  }
+
+  // __title
+
+  .c-a-button__title {
+    flex: 1 1 auto;
+    position: relative;
+    @include layers(root);
+    color: $c-a-button-title-color;
+    text-decoration: underline;
+    @extend .o-type-label;
+    margin-left: size(1);
+    margin-right: size(1);
+    transition: color 0.3s ease-in-out, transform 0.1s ease-in-out;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    width: size(3);
+    height: size(3);
+    position: relative;
+    @include layers(root);
+    fill: $c-a-button-icon-color;
+    transition: fill 0.3s ease-in-out, transform 0.1s ease-in-out;
+  }
+
+  // :focus
+
+  &:focus {
+    @include focus-remove();
+
+    &:after {
+      @include focus-add();
+    }
+  }
+
+  // :hover
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // .is-disabled or [disabled]
+
+  &.is-disabled,
+  &[disabled] {
+    .c-a-button__title {
+      color: $c-a-button-title-color-disabled;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-icon-color-disabled;
+    }
+
+    // :hover
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+// Button loading state
+// --is-spinning
+.c-a-button--is-spinning {
+  // Important deemed necessary here to override all button variations (primary, secondary, disabled) rather than
+  // adding multiple chained overrides
+  // :after
+  &:after {
+    display: none;
+  }
+
+  // Hide any button icons
+  // .c-a-icon
+  > .c-a-icon {
+    display: none;
+  }
+
+  // Hide the button label
+  // __title
+  .c-a-button__title {
+    visibility: hidden;
+  }
+
+  // Change the display value of the loading spinner when the button 'is-spinning'
+  // __loading-spinner
+  .c-a-button__loading-spinner {
+    display: flex;
+  }
+}
+
+// __loading-spinner
+
+.c-a-button__loading-spinner {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: $global-radius;
+  align-items: center;
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  @include layers(root);
+
+  + .c-a-icon {
+    margin-left: size(1);
+  }
+
+  .c-a-icon,
+  .c-a-button--secondary & .c-a-icon {
+    fill: palette-grey-tint(30) !important;
+    margin-right: size(0.5);
+  }
+}
+
+// __loading-spinner-icon
+
+.c-a-button__loading-spinner-icon {
+  display: inline-block;
+  margin-left: -#{size(1.75)};
+
+  .c-a-icon {
+    animation: spin 0.75s linear infinite;
+  }
+}
+
+// __loading-spinner-label
+
+.c-a-button__loading-spinner-label {
+  color: $color-white;
+}
+
+// .c-a-button--width
+// ==================
+
+// --width-flush
+
+.c-a-button--width-flush {
+  min-width: size(6);
+
+  // --rounded
+
+  &.c-a-button--rounded {
+    &:after {
+      border-radius: 100%;
+    }
+  }
+}
+
+// --width-narrow
+
+.c-a-button--width-narrow {
+  min-width: block-field(2);
+}
+
+// --width-wide
+
+.c-a-button--width-wide {
+  min-width: block-field(4);
+}
+
+// --width--full
+
+.c-a-button--width-full {
+  min-width: 0;
+  width: 100%;
+}
+
+// .c-a-button--size
+// =================
+
+// --size-xs
+
+.c-a-button--size-xs {
+  min-height: size(5);
+
+  &:after {
+    top: size(0.5);
+    height: calc(100% - #{size(1)});
+  }
+
+  // __title
+
+  .c-a-button__title {
+    @extend .o-type-size-base2;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    width: size(2);
+    height: size(2);
+  }
+
+  // &.c-a-button--width-flush
+
+  &.c-a-button--width-flush {
+    min-width: size(4);
+    padding: size(0.5) size(1);
+  }
+
+  // &.c-a-button--width-narrow
+
+  &.c-a-button--width-narrow {
+    padding: size(0.5) size(1);
+  }
+}
+
+// --size-sm
+
+.c-a-button--size-sm {
+  min-height: size(5);
+
+  // __title
+
+  .c-a-button__title {
+    @extend .o-type-size-base2;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    width: size(3);
+    height: size(3);
+  }
+
+  // &.c-a-button--width-flush
+
+  &.c-a-button--width-flush {
+    min-width: size(5);
+    padding: size(0.5) size(1);
+  }
+
+  // &.c-a-button--width-narrow
+
+  &.c-a-button--width-narrow {
+    padding: size(0.5) size(1.5);
+  }
+}
+
+// --size-md
+
+.c-a-button--size-md {
+  // __title
+
+  .c-a-button__title {
+    @extend .o-type-size-base2;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    width: size(1.6);
+    height: size(4);
+  }
+
+  // &.c-a-button--width-flush
+
+  &.c-a-button--width-flush {
+    min-width: size(6);
+    padding: size(0.5) size(1.5);
+  }
+}
+
+// --size-lg
+
+.c-a-button--size-lg {
+  min-height: size(8);
+
+  // __title
+
+  .c-a-button__title {
+    @extend .o-type-size-base4;
+    margin-left: size(2);
+    margin-right: size(2);
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    width: size(4);
+    height: size(4);
+  }
+
+  // &.c-a-button--width-flush
+
+  &.c-a-button--width-flush {
+    min-width: size(8);
+    padding: size(0.5) size(2);
+  }
+
+  // &.c-a-button--width-narrow
+
+  &.c-a-button--width-narrow {
+    padding: size(0.5) size(2.5);
+  }
+}
+
+// .c-a-button--primary
+// ====================
+
+.c-a-button--primary {
+  &:after {
+    border-width: $c-a-button-primary-border-width;
+
+    @if (config-theme(theme2) == true) {
+      border-width: 0;
+      border-bottom-width: $c-a-button-primary-border-width;
+    }
+
+    @if (config-theme(theme3) == true) {
+      border-width: 0;
+      border-bottom-width: $c-a-button-primary-border-width;
+    }
+
+    //border-style: $c-a-button-primary-border-style;
+    //border-color: $c-a-button-primary-border-color;
+    background-color: $c-a-button-primary-background-color;
+    //border-radius: $global-radius;
+  }
+
+  // __title
+
+  .c-a-button__title {
+    color: $c-a-button-primary-title-color;
+    text-decoration: none;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    fill: $c-a-button-primary-icon-color;
+  }
+
+  // :hover
+
+  &:hover {
+    &:after {
+      //transform: translateY($c-a-button-hover-offset);
+      // border-color: $c-a-button-primary-border-color-hover;
+      background-color: $c-a-button-primary-background-color-hover;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      //transform: translateY($c-a-button-hover-offset);
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      transform: translateY($c-a-button-hover-offset);
+    }
+  }
+
+  // :active
+
+  &:active {
+    &:after {
+      //border-color: $c-a-button-primary-border-color-active;
+      background-color: $c-a-button-primary-background-color-active;
+    }
+  }
+
+  // .is-disabled or [disabled]
+
+  &.is-disabled,
+  &[disabled] {
+    &:after {
+      background-color: $c-a-button-primary-background-color-disabled;
+      border: none;
+      transform: none;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      color: $c-a-button-primary-title-color-disabled;
+      transform: none;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-primary-icon-color-disabled;
+      transform: none;
+    }
+
+    // :hover
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+// .c-a-button--secondary
+// ======================
+
+.c-a-button--secondary {
+  &:after {
+    border-width: $c-a-button-secondary-border-width;
+    border-style: $c-a-button-secondary-border-style;
+    border-color: $c-a-button-secondary-border-color;
+    background-color: $c-a-button-secondary-background-color;
+    border-radius: $global-radius;
+  }
+
+  // __title
+
+  .c-a-button__title {
+    color: $c-a-button-secondary-title-color;
+    text-decoration: none;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    fill: $c-a-button-secondary-icon-color;
+  }
+
+  // :hover
+
+  &:hover {
+    &:after {
+      transform: translateY($c-a-button-hover-offset);
+      border-color: $c-a-button-secondary-border-color-hover;
+      background-color: $c-a-button-secondary-background-color-hover;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      color: $c-a-button-secondary-title-color-hover;
+      transform: translateY($c-a-button-hover-offset);
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-secondary-icon-color-hover;
+      transform: translateY($c-a-button-hover-offset);
+    }
+  }
+
+  // :active
+
+  &:active {
+    &:after {
+      background-color: $c-a-button-secondary-background-color-active;
+      border-color: $c-a-button-secondary-border-color-active;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      color: $c-a-button-secondary-title-color-active;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-secondary-icon-color-active;
+    }
+  }
+
+  // .is-disabled or [disabled]
+
+  &.is-disabled,
+  &[disabled] {
+    &:after {
+      background-color: $c-a-button-secondary-background-color-disabled;
+      border-color: $c-a-button-secondary-border-color-disabled;
+      transform: none;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      color: $c-a-button-secondary-title-color-disabled;
+      transform: none;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-secondary-icon-color-disabled;
+      transform: none;
+    }
+
+    // :hover
+
+    &:hover {
+      cursor: default;
+
+      &:after {
+        background-color: $c-a-button-secondary-background-color-disabled;
+      }
+    }
+
+    // :active
+
+    &:active {
+      &:after {
+        background-color: $c-a-button-secondary-background-color-disabled;
+      }
+    }
+  }
+}
+
+// .c-a-button--white
+// ==================
+
+.c-a-button--white {
+  &:after {
+    // border-width: $c-a-button-white-border-width;
+    // border-style: $c-a-button-white-border-style;
+    // border-color: $c-a-button-white-border-color;
+    background-color: $c-a-button-white-background-color;
+    // border-radius: $global-radius;
+  }
+
+  // __title
+
+  .c-a-button__title {
+    color: $c-a-button-white-title-color;
+    text-decoration: underline;
+  }
+
+  // .c-a-icon
+
+  .c-a-icon {
+    fill: $c-a-button-white-icon-color;
+  }
+
+  // :hover
+
+  &:hover {
+    &:after {
+      // transform: translateY($c-a-button-hover-offset);
+      // border-color: $c-a-button-white-border-color-hover;
+      // background-color: $c-a-button-white-background-color-hover;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      color: $c-a-button-white-title-color-hover;
+      // transform: translateY($c-a-button-hover-offset);
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-white-icon-color-hover;
+      // transform: translateY($c-a-button-hover-offset);
+    }
+  }
+
+  // :active
+
+  &:active {
+    &:after {
+      // background-color: $c-a-button-white-background-color-active;
+      // border-color: $c-a-button-white-border-color-active;
+    }
+
+    // __title
+
+    .c-a-button__title {
+      color: $c-a-button-white-title-color-active;
+    }
+
+    // .c-a-icon
+
+    .c-a-icon {
+      fill: $c-a-button-white-icon-color-active;
+    }
+  }
+}
+
+// --pill
+
+.c-a-button--pill {
+  &:after {
+    border-radius: 3em;
+  }
+}
+
+// --color-secondary
+
+.c-a-button--color-secondary {
+  // Nesting required for specificity
+  // __title
+
+  .c-a-button__title {
+    color: palette-grey-shade(30);
+  }
+}
+
+// --unpadded
+
+.c-a-button--unpadded {
+  min-width: 0;
+  padding: 0;
+
+  .c-a-icon {
+    margin-right: size(1);
+  }
+
+  .c-a-button__title {
+    margin: 0;
+  }
+}

@@ -1,0 +1,39 @@
+// =============================================================================
+/* _utility.position */
+// =============================================================================
+//
+// This utility creates a single purpose class that applies a css
+// position property and value.
+//
+// Usage:
+//  <div class="u-position-relative">
+//    ...
+
+// .u-position
+// ===========
+
+.u-position {
+    // static
+
+    &-static {
+        position: static !important;
+    }
+
+    // relative
+
+    &-relative {
+        position: relative !important;
+    }
+
+    // absolute
+
+    &-absolute {
+        position: absolute !important;
+    }
+
+    // fixed
+
+    &-fixed {
+        position: fixed !important;
+    }
+}

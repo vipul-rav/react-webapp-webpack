@@ -1,0 +1,24 @@
+// =============================================================================
+/* _object.type-size */
+// =============================================================================
+//
+// Create a class for each custom type size defined and used in the codebase.
+
+.o-type-size {
+    @each $name in $type-size {
+        // [1]
+        $name: nth($name, 1);
+        &-#{$name} {
+            // [2]
+            @each $breakpoint in $breakpoint-groups {
+                // [3]
+                $key: nth($breakpoint, 1);
+                @include media-breakpoint-up($key) {
+                    // [4]
+                    @include type-setup($name, $key) // [4]
+;
+                }
+            }
+        }
+    }
+}

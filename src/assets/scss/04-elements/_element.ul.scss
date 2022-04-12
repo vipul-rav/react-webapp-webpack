@@ -1,0 +1,15 @@
+// =============================================================================
+/* _element.ul */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/ul
+
+ul {
+    margin-bottom: size(2);
+    padding-left: size(3);
+
+    ul {
+        margin-bottom: 0;
+        padding-left: size(2);
+    }
+}

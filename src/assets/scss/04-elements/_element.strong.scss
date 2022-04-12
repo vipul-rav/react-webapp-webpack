@@ -1,0 +1,16 @@
+// =============================================================================
+/* _element.strong */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/strong
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Prevent the duplication of [2] by the next rule in Safari 6 (^).
+// [2] Add the correct font weight in Chrome, Edge, and Safari (^).
+
+strong {
+    @include font-text(heavy);
+    font-weight: inherit; // [1]
+    font-weight: bolder; // [2]
+}

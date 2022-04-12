@@ -1,0 +1,118 @@
+// =============================================================================
+/* _utility.padding */
+// =============================================================================
+//
+// This utility creates a class that applies a css padding property and value.
+//
+// Usage:
+//  <div class="u-padding-0">
+//    ...
+//  <div class="u-padding-left-1">
+//    ...
+//  <div class="u-padding-y-2">
+//    ...
+
+// .u-padding
+// ==========
+
+.u-padding {
+    &-0 {
+        padding: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-#{$i} {
+            padding: ($size) !important;
+        }
+    }
+
+    // top
+
+    &-top-0 {
+        padding-top: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-top-#{$i} {
+            padding-top: ($size) !important;
+        }
+    }
+
+    // right
+
+    &-right-0 {
+        padding-right: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-right-#{$i} {
+            padding-right: ($size) !important;
+        }
+    }
+
+    // bottom
+
+    &-bottom-0 {
+        padding-bottom: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-bottom-#{$i} {
+            padding-bottom: ($size) !important;
+        }
+    }
+
+    // left
+
+    &-left-0 {
+        padding-left: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-left-#{$i} {
+            padding-left: ($size) !important;
+        }
+    }
+
+    // x (axis)
+
+    &-x-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-x-#{$i} {
+            padding-left: ($size) !important;
+            padding-right: ($size) !important;
+        }
+    }
+
+    // y (axis)
+
+    &-y-0 {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-y-#{$i} {
+            padding-top: ($size) !important;
+            padding-bottom: ($size) !important;
+        }
+    }
+}

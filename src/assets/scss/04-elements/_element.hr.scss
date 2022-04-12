@@ -1,0 +1,19 @@
+// =============================================================================
+/* _element.hr */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/hr
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// [1] Add the correct box sizing in Firefox (^).
+// [2] Show the overflow in Edge and IE (^).
+
+hr {
+    box-sizing: content-box; // [1]
+    height: 1px; // [1]
+    border: none;
+    background-color: $color-body;
+    overflow: visible; // [2]
+    margin-bottom: size(2);
+}

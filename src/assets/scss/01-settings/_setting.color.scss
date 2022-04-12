@@ -1,0 +1,249 @@
+// =============================================================================
+// _setting.color
+// =============================================================================
+//
+// These settings define all common and brand specific colors used throughout
+// the UI.
+
+$color-white: #fff !default;
+$color-black: #0b0c0c !default;
+$red: #d4351c !default;
+$yellow: #ffdd00 !default;
+$green: #00703c !default;
+$dark-green: #005c34 !default;
+$blue: #1d70b8 !default;
+$dark-blue: #003078 !default;
+$light-blue: #5694ca !default;
+$purple: #4c2c92 !default;
+$dark-grey: #505a5f !default;
+$mid-grey: #b1b4b6 !default;
+$light-grey: #f3f2f1 !default;
+$slate: #505a5f !default;
+$pebble: #f3f2f1 !default;
+
+// Base
+// ====
+// The '$color-base' map sets up colors that should only be applied using the
+// below 'get-base-colour' function to assign a generic look and feel to
+// non-branded UI.
+
+$color-base: (
+  f: #fff,
+  e: #eee,
+  d: #ddd,
+  c: #ccc,
+  b: #bbb,
+  a: #aaa,
+  9: #999,
+  8: #888,
+  7: #777,
+  6: #1d70b8,
+  5: #003078,
+  4: #444,
+  3: #333,
+  2: #222,
+  1: #111,
+  0: #0b0c0c
+) !default;
+
+// This 'get-base-colour' function assigns colors from the above '$color-base'
+// map using map-get().
+//
+// Usage:
+// background-color: get-base-colour(9)
+
+@function get-base-colour($key) {
+  @return map-get($color-base, $key);
+}
+
+// Focus
+// =====
+// The '$color-focus' sets a consistant color to use later in the code-base for
+// interactive elements.
+
+$color-focus: #ffdd00 !default;
+
+//
+// ===
+// The '$color-theme' map sets up colors that should only be applied using the
+// below 'get-theme-colour' function to assign a brand specific UI.
+
+$color-theme: (
+  red: #d4351c,
+  yellow: #ffdd00,
+  green: #00703c,
+  dark-green: #005c34,
+  blue: #1d70b8,
+  dark-blue: #003078,
+  light-blue: #5694ca,
+  purple: #4c2c92,
+  black: #0b0c0c,
+  dark-grey: #505a5f,
+  mid-grey: #b1b4b6,
+  light-grey: #f3f2f1,
+  white: #ffffff,
+  slate: #505a5f,
+  pebble: #f3f2f1
+) !default;
+
+$color-theme-2: (
+  red: #d4351c,
+  yellow: #ffdd00,
+  green: #4d0ee0,
+  dark-green: #005c34,
+  blue: #1d70b8,
+  dark-blue: #003078,
+  light-blue: #5694ca,
+  purple: #4c2c92,
+  black: #0b0c0c,
+  dark-grey: #505a5f,
+  mid-grey: #b1b4b6,
+  light-grey: #f3f2f1,
+  white: #ffffff,
+  slate: #505a5f,
+  pebble: #f3f2f1
+);
+
+// This 'get-theme-colour' function assigns colors from the above '$color-theme'
+// map using map-get().
+//
+// Usage:
+// background-color: get-theme-colour(red)
+
+@function get-theme-colour($key) {
+  @return map-get($color-theme, $key);
+}
+
+//
+// =
+// The '$color-default' map sets up colors that should only be applied using the
+// below 'get-default-colour' function to assign a brand specific UI.
+
+$color-default: (
+  default: #ffffff
+) !default;
+
+// This 'get-default-colour' function assigns colors from the above '$color-default'
+// map using map-get().
+//
+// Usage:
+// background-color: get-default-colour(key)
+
+@function get-default-colour($key) {
+  @return map-get($color-default, $key);
+}
+
+// Grey
+// ====
+// '$color-grey' is used to set a mid-tone grey for the UI.
+// This grey also sets the foundations for a greyscale range that is used below
+// in both 'tint' and 'shade' form.
+
+$color-grey: get-theme-colour(slate) !default;
+
+// Grey tint
+// =========
+// The '$color-grey-tint' map sets up colors using the previously assigned
+// '$color-grey' and mixes the color with white to achieve a tint.
+//
+// These colours should only be applied using the below 'palette-grey-tint'
+// function to assign a brand specific UI.
+
+$color-grey-tint: (
+  95: mix($color-white, $color-grey, 95%),
+  90: mix($color-white, $color-grey, 90%),
+  80: mix($color-white, $color-grey, 80%),
+  70: mix($color-white, $color-grey, 70%),
+  60: mix($color-white, $color-grey, 60%),
+  50: mix($color-white, $color-grey, 50%),
+  40: mix($color-white, $color-grey, 40%),
+  30: mix($color-white, $color-grey, 30%),
+  20: mix($color-white, $color-grey, 20%),
+  10: mix($color-white, $color-grey, 10%)
+) !default;
+
+// This 'palette-grey-tint' function assigns colors from the above
+// '$color-grey-tint' map using map-get().
+//
+// Usage:
+// background-color: palette-grey-tint(50)
+
+@function palette-grey-tint($key) {
+  @return map-get($color-grey-tint, $key);
+}
+
+// Grey shade
+// ==========
+// The '$color-grey-shade' map sets up colors using the previously assigned
+// '$color-grey' and mixes the color with black to achieve a shade.
+//
+// These colours should only be applied using the below 'palette-grey-shade'
+// function to assign a brand specific UI.
+
+$color-grey-shade: (
+  90: mix($color-black, get-base-colour(6), 90%),
+  80: mix($color-black, get-base-colour(6), 80%),
+  70: mix($color-black, get-base-colour(6), 70%),
+  60: mix($color-black, get-base-colour(6), 60%),
+  50: mix($color-black, get-base-colour(6), 50%),
+  40: mix($color-black, get-base-colour(6), 40%),
+  30: mix($color-black, get-base-colour(6), 30%),
+  20: mix($color-black, get-base-colour(6), 20%),
+  10: mix($color-black, get-base-colour(6), 10%)
+) !default;
+
+// This 'palette-grey-shade' function assigns colors from the above
+// '$color-grey-shade' map using map-get().
+//
+// Usage:
+// background-color: palette-grey-shade(50)
+
+@function palette-grey-shade($key) {
+  @return map-get($color-grey-shade, $key);
+}
+
+// Utility
+// =======
+// The '$color-utility' map sets up colors that should only be applied using the
+// below 'palette-utility' function to assign utility led UI.
+
+$color-utility: (
+  error: #d4351c,
+  warning: #f47738,
+  warning-tint: #fbefef
+) !default;
+
+// This 'palette-utility' function assigns colors from the above
+// '$color-utility' map using map-get().
+//
+// Usage:
+// background-color: palette-utility(warning)
+
+@function palette-utility($key) {
+  @return map-get($color-utility, $key);
+}
+
+// Body
+// ====
+// This setting is used to define the common 'body' color.
+
+$color-body: get-base-colour(0) !default;
+
+// Primary
+// =======
+// The '$color-primary' map sets up colors that should only be applied using the
+// below 'palette-primary' function to assign a brand specific UI.
+
+$color-primary: (
+  1: get-theme-colour(blue)
+) !default;
+
+// This 'palette-primary' function assigns colors from the above
+// '$color-primary' map using map-get().
+//
+// Usage:
+// background-color: palette-primary(1)
+
+@function palette-primary($key) {
+  @return map-get($color-primary, $key);
+}

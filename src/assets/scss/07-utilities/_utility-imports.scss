@@ -1,0 +1,35 @@
+// =============================================================================
+/* _utilities */
+// =============================================================================
+//
+// This layer contains utility helper classes with the ability to override
+// anything from a previous layer with a higher specificity.
+//
+// This is also where strategic, single purpose utility classes should live.
+
+@import 'utility.background-color';
+@import 'utility.border';
+@import 'utility.break-word';
+@import 'utility.bottom';
+@import 'utility.color';
+@import 'utility.component-spacing';
+@import 'utility.container-gutter-overlap';
+@import 'utility.display';
+@import 'utility.fill';
+@import 'utility.flex';
+@import 'utility.full-width';
+@import 'utility.hide';
+@import 'utility.left';
+@import 'utility.margin';
+@import 'utility.overflow';
+@import 'utility.padding';
+@import 'utility.position';
+@import 'utility.right';
+@import 'utility.text-align';
+@import 'utility.text-decoration';
+@import 'utility.top';
+@import 'utility.type-size';
+@import 'utility.visually-hidden';
+@import 'utility.white-space';
+@import 'utility.width';
+@import 'utility.z-index';

@@ -1,0 +1,187 @@
+// =============================================================================
+/* _utility.margin */
+// =============================================================================
+//
+// This utility creates a class that applies a css margin property and value.
+//
+// Usage:
+//  <div class="u-margin-0">
+//    ...
+//  <div class="u-margin-left-1">
+//    ...
+//  <div class="u-margin-y-2">
+//    ...
+
+// .u-margin
+// =========
+
+.u-margin {
+    &-0 {
+        margin: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-#{$i} {
+            margin: ($size) !important;
+        }
+    }
+
+    // top
+
+    &-top-0 {
+        margin-top: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-top-#{$i} {
+            margin-top: ($size) !important;
+        }
+    }
+
+    // top-pull
+
+    @for $i from 1 through 5 {
+        $size: size(1 * $i);
+
+        &-top-pull-#{$i} {
+            margin-top: -($size) !important;
+        }
+    }
+
+    // right
+
+    &-right-0 {
+        margin-right: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-right-#{$i} {
+            margin-right: ($size) !important;
+        }
+    }
+
+    // right-pull
+
+    @for $i from 1 through 5 {
+        $size: size(1 * $i);
+
+        &-right-pull-#{$i} {
+            margin-right: -($size) !important;
+        }
+    }
+
+    // bottom
+
+    &-bottom-0 {
+        margin-bottom: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-bottom-#{$i} {
+            margin-bottom: ($size) !important;
+        }
+    }
+
+    // bottom-pull
+
+    @for $i from 1 through 5 {
+        $size: size(1 * $i);
+
+        &-bottom-pull-#{$i} {
+            margin-bottom: -($size) !important;
+        }
+    }
+
+    // left
+
+    &-left-0 {
+        margin-left: 0 !important;
+    }
+
+    @for $i from 1 through 25 {
+        $size: size(1 * $i);
+
+        &-left-#{$i} {
+            margin-left: ($size) !important;
+        }
+    }
+
+    // left-pull
+
+    @for $i from 1 through 5 {
+        $size: size(1 * $i);
+
+        &-left-pull-#{$i} {
+            margin-left: -($size) !important;
+        }
+    }
+
+    // x-auto (axis)
+
+    &-x-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    // x (axis)
+
+    &-x-0 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-x-#{$i} {
+            margin-left: ($size) !important;
+            margin-right: ($size) !important;
+        }
+    }
+
+    // x-pull (axis)
+
+    @for $i from 1 through 5 {
+        $size: size(1 * $i);
+
+        &-x-pull-#{$i} {
+            margin-left: -($size) !important;
+            margin-right: -($size) !important;
+        }
+    }
+
+    // y (axis)
+
+    &-y-0 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    @for $i from 1 through 8 {
+        $size: size(1 * $i);
+
+        &-y-#{$i} {
+            margin-top: ($size) !important;
+            margin-bottom: ($size) !important;
+        }
+    }
+
+    // y-pull (axis)
+
+    @for $i from 1 through 5 {
+        $size: size(1 * $i);
+
+        &-y-pull-#{$i} {
+            margin-top: -($size) !important;
+            margin-bottom: -($size) !important;
+        }
+    }
+}

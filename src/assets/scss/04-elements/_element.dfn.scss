@@ -1,0 +1,13 @@
+// =============================================================================
+/* _element.dfn */
+// =============================================================================
+//
+// https://developer.mozilla.org/en/docs/Web/HTML/Element/dfn
+//
+// (^) Denotes normalize v7.0.0 guidance.
+
+// Add the correct font style in Android 4.3-.
+
+dfn {
+    @include font-text(italic);
+}

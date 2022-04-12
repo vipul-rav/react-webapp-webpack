@@ -1,0 +1,27 @@
+// =============================================================================
+/* _utility.display */
+// =============================================================================
+//
+// This utility creates a class that applies a css display property and value.
+//
+// Usage:
+//  <div class="u-display-block">
+//    ...
+
+// .u-display
+// ==========
+
+.u-display {
+    &-block {
+        display: block !important;
+    }
+    &-inline {
+        display: inline !important;
+    }
+    &-inline-block {
+        display: inline-block !important;
+    }
+    &-none {
+        display: none !important;
+    }
+}
