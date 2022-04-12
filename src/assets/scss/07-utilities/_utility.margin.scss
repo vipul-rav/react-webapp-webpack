@@ -16,172 +16,172 @@
 // =========
 
 .u-margin {
-    &-0 {
-        margin: 0 !important;
+  &-0 {
+    margin: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-#{$i} {
+      margin: ($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // top
 
-        &-#{$i} {
-            margin: ($size) !important;
-        }
+  &-top-0 {
+    margin-top: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-top-#{$i} {
+      margin-top: ($size) !important;
     }
+  }
 
-    // top
+  // top-pull
 
-    &-top-0 {
-        margin-top: 0 !important;
+  @for $i from 1 through 5 {
+    $size: size(1 * $i);
+
+    &-top-pull-#{$i} {
+      margin-top: -($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // right
 
-        &-top-#{$i} {
-            margin-top: ($size) !important;
-        }
+  &-right-0 {
+    margin-right: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-right-#{$i} {
+      margin-right: ($size) !important;
     }
+  }
 
-    // top-pull
+  // right-pull
 
-    @for $i from 1 through 5 {
-        $size: size(1 * $i);
+  @for $i from 1 through 5 {
+    $size: size(1 * $i);
 
-        &-top-pull-#{$i} {
-            margin-top: -($size) !important;
-        }
+    &-right-pull-#{$i} {
+      margin-right: -($size) !important;
     }
+  }
 
-    // right
+  // bottom
 
-    &-right-0 {
-        margin-right: 0 !important;
+  &-bottom-0 {
+    margin-bottom: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-bottom-#{$i} {
+      margin-bottom: ($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // bottom-pull
 
-        &-right-#{$i} {
-            margin-right: ($size) !important;
-        }
+  @for $i from 1 through 5 {
+    $size: size(1 * $i);
+
+    &-bottom-pull-#{$i} {
+      margin-bottom: -($size) !important;
     }
+  }
 
-    // right-pull
+  // left
 
-    @for $i from 1 through 5 {
-        $size: size(1 * $i);
+  &-left-0 {
+    margin-left: 0 !important;
+  }
 
-        &-right-pull-#{$i} {
-            margin-right: -($size) !important;
-        }
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-left-#{$i} {
+      margin-left: ($size) !important;
     }
+  }
 
-    // bottom
+  // left-pull
 
-    &-bottom-0 {
-        margin-bottom: 0 !important;
+  @for $i from 1 through 5 {
+    $size: size(1 * $i);
+
+    &-left-pull-#{$i} {
+      margin-left: -($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // x-auto (axis)
 
-        &-bottom-#{$i} {
-            margin-bottom: ($size) !important;
-        }
+  &-x-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  // x (axis)
+
+  &-x-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  @for $i from 1 through 8 {
+    $size: size(1 * $i);
+
+    &-x-#{$i} {
+      margin-left: ($size) !important;
+      margin-right: ($size) !important;
     }
+  }
 
-    // bottom-pull
+  // x-pull (axis)
 
-    @for $i from 1 through 5 {
-        $size: size(1 * $i);
+  @for $i from 1 through 5 {
+    $size: size(1 * $i);
 
-        &-bottom-pull-#{$i} {
-            margin-bottom: -($size) !important;
-        }
+    &-x-pull-#{$i} {
+      margin-left: -($size) !important;
+      margin-right: -($size) !important;
     }
+  }
 
-    // left
+  // y (axis)
 
-    &-left-0 {
-        margin-left: 0 !important;
+  &-y-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  @for $i from 1 through 8 {
+    $size: size(1 * $i);
+
+    &-y-#{$i} {
+      margin-top: ($size) !important;
+      margin-bottom: ($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // y-pull (axis)
 
-        &-left-#{$i} {
-            margin-left: ($size) !important;
-        }
+  @for $i from 1 through 5 {
+    $size: size(1 * $i);
+
+    &-y-pull-#{$i} {
+      margin-top: -($size) !important;
+      margin-bottom: -($size) !important;
     }
-
-    // left-pull
-
-    @for $i from 1 through 5 {
-        $size: size(1 * $i);
-
-        &-left-pull-#{$i} {
-            margin-left: -($size) !important;
-        }
-    }
-
-    // x-auto (axis)
-
-    &-x-auto {
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    // x (axis)
-
-    &-x-0 {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    @for $i from 1 through 8 {
-        $size: size(1 * $i);
-
-        &-x-#{$i} {
-            margin-left: ($size) !important;
-            margin-right: ($size) !important;
-        }
-    }
-
-    // x-pull (axis)
-
-    @for $i from 1 through 5 {
-        $size: size(1 * $i);
-
-        &-x-pull-#{$i} {
-            margin-left: -($size) !important;
-            margin-right: -($size) !important;
-        }
-    }
-
-    // y (axis)
-
-    &-y-0 {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    @for $i from 1 through 8 {
-        $size: size(1 * $i);
-
-        &-y-#{$i} {
-            margin-top: ($size) !important;
-            margin-bottom: ($size) !important;
-        }
-    }
-
-    // y-pull (axis)
-
-    @for $i from 1 through 5 {
-        $size: size(1 * $i);
-
-        &-y-pull-#{$i} {
-            margin-top: -($size) !important;
-            margin-bottom: -($size) !important;
-        }
-    }
+  }
 }

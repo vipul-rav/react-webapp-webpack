@@ -13,27 +13,27 @@
 // =============
 
 .u-full-width {
-    width: 100% !important;
+  width: 100% !important;
 
-    // -#{$key}-up
+  // -#{$key}-up
 
-    @each $breakpoint, $num in ($grid-breakpoints) {
-        $key: nth($breakpoint, 1);
-        @include media-breakpoint-up($key) {
-            &-#{$key}-up {
-                width: 100% !important;
-            }
-        }
+  @each $breakpoint, $num in ($grid-breakpoints) {
+    $key: nth($breakpoint, 1);
+    @include media-breakpoint-up($key) {
+      &-#{$key}-up {
+        width: 100% !important;
+      }
     }
+  }
 
-    // -#{$key}-down
+  // -#{$key}-down
 
-    @each $breakpoint, $num in ($grid-breakpoints) {
-        $key: nth($breakpoint, 1);
-        @include media-breakpoint-down($key) {
-            &-#{$key}-down {
-                width: 100% !important;
-            }
-        }
+  @each $breakpoint, $num in ($grid-breakpoints) {
+    $key: nth($breakpoint, 1);
+    @include media-breakpoint-down($key) {
+      &-#{$key}-down {
+        width: 100% !important;
+      }
     }
+  }
 }

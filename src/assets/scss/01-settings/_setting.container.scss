@@ -10,15 +10,15 @@
 // key/values within a map.
 
 $container-padding: (
-    xs1: size(2),
-    xs2: size(2),
-    sm1: size(3),
-    sm2: size(3),
-    md1: size(3),
-    lg1: size(3),
-    lg2: size(3),
-    lg3: size(3),
-    xl1: size(3)
+  xs1: size(2),
+  xs2: size(2),
+  sm1: size(3),
+  sm2: size(3),
+  md1: size(3),
+  lg1: size(3),
+  lg2: size(3),
+  lg3: size(3),
+  xl1: size(3)
 ) !default;
 
 // Container max widths
@@ -27,7 +27,7 @@ $container-padding: (
 // key/values within a map.
 
 $container-max-widths: (
-    xl1: 1920px
+  xl1: 1920px
 ) !default;
 
 // Container custom widths
@@ -36,8 +36,8 @@ $container-max-widths: (
 // key/values within a map.
 
 $container-custom-widths: (
-    xs: 320px,
-    sm: 640px,
-    md: 960px,
-    lg: 1280px
+  xs: 320px,
+  sm: 640px,
+  md: 960px,
+  lg: 1280px
 ) !default;

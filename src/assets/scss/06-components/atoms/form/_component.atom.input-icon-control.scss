@@ -22,58 +22,58 @@ $c-a-input-icon-control-icon-fill-disabled: mix($color-body, $color-white, 30%) 
 // =======================
 
 .c-a-input-icon-control {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: block-field(1);
-    height: block-field(1);
-    position: relative;
-    background-color: $c-a-input-icon-control-background-color;
-    border-width: $c-a-input-icon-control-border-width;
-    border-style: $c-a-input-icon-control-border-style;
-    border-color: $c-a-input-icon-control-border-color;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: block-field(1);
+  height: block-field(1);
+  position: relative;
+  background-color: $c-a-input-icon-control-background-color;
+  border-width: $c-a-input-icon-control-border-width;
+  border-style: $c-a-input-icon-control-border-style;
+  border-color: $c-a-input-icon-control-border-color;
+
+  // .c-a-icon
+
+  .c-a-icon {
+    fill: $c-a-input-icon-control-icon-fill;
+    width: size(3);
+    height: size(3);
+  }
+
+  // .is-disabled
+
+  &.is-disabled {
+    background-color: $c-a-input-icon-control-background-color-disabled;
+    border-color: $c-a-input-icon-control-border-color-disabled;
 
     // .c-a-icon
 
     .c-a-icon {
-        fill: $c-a-input-icon-control-icon-fill;
-        width: size(3);
-        height: size(3);
+      fill: $c-a-input-icon-control-icon-fill-disabled;
     }
-
-    // .is-disabled
-
-    &.is-disabled {
-        background-color: $c-a-input-icon-control-background-color-disabled;
-        border-color: $c-a-input-icon-control-border-color-disabled;
-
-        // .c-a-icon
-
-        .c-a-icon {
-            fill: $c-a-input-icon-control-icon-fill-disabled;
-        }
-    }
+  }
 }
 
 // --prefix
 
 .c-a-input-icon-control--prefix {
-    border-right: none;
-    justify-content: center;
-    border-radius: $global-radius 0 0 $global-radius;
+  border-right: none;
+  justify-content: center;
+  border-radius: $global-radius 0 0 $global-radius;
 }
 
 // --suffix
 
 .c-a-input-icon-control--suffix {
-    border-left: none;
-    justify-content: center;
-    border-radius: 0 $global-radius $global-radius 0;
+  border-left: none;
+  justify-content: center;
+  border-radius: 0 $global-radius $global-radius 0;
 }
 
 // --input-reveal
 
 .c-a-input-icon-control--suffix > .c-a-icon--input-reveal {
-    display: none;
+  display: none;
 }

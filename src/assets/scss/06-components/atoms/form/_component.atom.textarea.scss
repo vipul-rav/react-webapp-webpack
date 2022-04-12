@@ -25,38 +25,38 @@ $c-a-textarea-color-focus: $color-body !default;
 // =============
 
 .c-a-textarea {
-    @include type-responsive(base3);
-    width: 100%;
-    padding: size(1);
-    min-height: size(8);
-    height: block-field(3);
-    color: $c-a-textarea-color;
-    border-width: $c-a-textarea-border-width;
-    border-style: $c-a-textarea-border-style;
-    border-color: $c-a-textarea-border-color;
-    border-radius: $global-radius;
-    background-color: $c-a-textarea-background-color;
+  @include type-responsive(base3);
+  width: 100%;
+  padding: size(1);
+  min-height: size(8);
+  height: block-field(3);
+  color: $c-a-textarea-color;
+  border-width: $c-a-textarea-border-width;
+  border-style: $c-a-textarea-border-style;
+  border-color: $c-a-textarea-border-color;
+  border-radius: $global-radius;
+  background-color: $c-a-textarea-background-color;
 
-    // .is-disabled or [disabled]
+  // .is-disabled or [disabled]
 
-    &.is-disabled,
-    &[disabled] {
-        color: $c-a-textarea-color-disabled;
-        border-color: $c-a-textarea-border-color-disabled;
-        background-color: $c-a-textarea-background-color-disabled;
+  &.is-disabled,
+  &[disabled] {
+    color: $c-a-textarea-color-disabled;
+    border-color: $c-a-textarea-border-color-disabled;
+    background-color: $c-a-textarea-background-color-disabled;
 
-        &:hover {
-            cursor: default;
-        }
+    &:hover {
+      cursor: default;
     }
+  }
 
-    // :focus
+  // :focus
 
-    &:focus {
-        color: $c-a-textarea-color-focus;
-        border-color: $c-a-textarea-border-color-focus;
-        background-color: $c-a-textarea-background-color-focus;
-        position: relative;
-        @include layers(root);
-    }
+  &:focus {
+    color: $c-a-textarea-color-focus;
+    border-color: $c-a-textarea-border-color-focus;
+    background-color: $c-a-textarea-background-color-focus;
+    position: relative;
+    @include layers(root);
+  }
 }

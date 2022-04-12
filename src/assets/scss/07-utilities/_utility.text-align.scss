@@ -15,48 +15,48 @@
 // =============
 
 .u-text-align {
-    // left
+  // left
 
-    &-left {
-        text-align: left !important;
+  &-left {
+    text-align: left !important;
 
-        @each $breakpoint, $num in ($grid-breakpoints) {
-            $key: nth($breakpoint, 1);
-            @include media-breakpoint-up($key) {
-                &-#{$key} {
-                    text-align: left !important;
-                }
-            }
+    @each $breakpoint, $num in ($grid-breakpoints) {
+      $key: nth($breakpoint, 1);
+      @include media-breakpoint-up($key) {
+        &-#{$key} {
+          text-align: left !important;
         }
+      }
     }
+  }
 
-    // center
+  // center
 
-    &-center {
-        text-align: center !important;
+  &-center {
+    text-align: center !important;
 
-        @each $breakpoint, $num in ($grid-breakpoints) {
-            $key: nth($breakpoint, 1);
-            @include media-breakpoint-up($key) {
-                &-#{$key} {
-                    text-align: center !important;
-                }
-            }
+    @each $breakpoint, $num in ($grid-breakpoints) {
+      $key: nth($breakpoint, 1);
+      @include media-breakpoint-up($key) {
+        &-#{$key} {
+          text-align: center !important;
         }
+      }
     }
+  }
 
-    // right
+  // right
 
-    &-right {
-        text-align: right !important;
+  &-right {
+    text-align: right !important;
 
-        @each $breakpoint, $num in ($grid-breakpoints) {
-            $key: nth($breakpoint, 1);
-            @include media-breakpoint-up($key) {
-                &-#{$key} {
-                    text-align: right !important;
-                }
-            }
+    @each $breakpoint, $num in ($grid-breakpoints) {
+      $key: nth($breakpoint, 1);
+      @include media-breakpoint-up($key) {
+        &-#{$key} {
+          text-align: right !important;
         }
+      }
     }
+  }
 }

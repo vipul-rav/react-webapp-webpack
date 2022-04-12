@@ -11,26 +11,26 @@
 // [3] Remove the default vertical scrollbar in IE (^)
 
 textarea {
-    @include font-text(); // [1]
-    font-size: 100%; // [1]
-    line-height: 1.15; // [1]
-    margin: 0; // [2]
-    overflow: auto; // [3]
+  @include font-text(); // [1]
+  font-size: 100%; // [1]
+  line-height: 1.15; // [1]
+  margin: 0; // [2]
+  overflow: auto; // [3]
 
-    &::-webkit-input-placeholder {
-        color: mix($color-body, $color-white, 30%);
-    }
-    &::-moz-placeholder {
-        color: mix($color-body, $color-white, 30%);
-    }
-    &:-ms-input-placeholder {
-        color: mix($color-body, $color-white, 30%);
-    }
-    &:-moz-placeholder {
-        color: mix($color-body, $color-white, 30%);
-    }
+  &::-webkit-input-placeholder {
+    color: mix($color-body, $color-white, 30%);
+  }
+  &::-moz-placeholder {
+    color: mix($color-body, $color-white, 30%);
+  }
+  &:-ms-input-placeholder {
+    color: mix($color-body, $color-white, 30%);
+  }
+  &:-moz-placeholder {
+    color: mix($color-body, $color-white, 30%);
+  }
 
-    &:focus {
-        @include focus-add();
-    }
+  &:focus {
+    @include focus-add();
+  }
 }

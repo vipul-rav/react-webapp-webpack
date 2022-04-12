@@ -11,12 +11,12 @@
 // each of the required families, weights, styles and formats.
 
 @mixin font-face($font-family, $font-path, $font-weight, $font-style) {
-    @font-face {
-        font-family: $font-family;
-        src: url('#{$font-path}.woff2') format('woff2'), url('#{$font-path}.woff') format('woff');
-        font-weight: $font-weight;
-        font-style: $font-style;
-    }
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$font-path}.woff2') format('woff2'), url('#{$font-path}.woff') format('woff');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
 }
 
 // Text font sourcing
@@ -38,23 +38,23 @@
 //   .selector { @include font-text(heavy) }
 
 @mixin font-text($type: default) {
-    // Italic text fonts
+  // Italic text fonts
 
-    // Heavy text fonts
+  // Heavy text fonts
 
-    @if $type == heavy {
-        font-family: '#{$font-text-heavy-name}', #{$font-text-fallback};
-        font-weight: #{$font-text-heavy-weight};
-        font-style: #{$font-text-heavy-style};
-    }
+  @if $type == heavy {
+    font-family: '#{$font-text-heavy-name}', #{$font-text-fallback};
+    font-weight: #{$font-text-heavy-weight};
+    font-style: #{$font-text-heavy-style};
+  }
 
-    // Default text fonts
+  // Default text fonts
 
-    @else {
-        font-family: '#{$font-text-name}', #{$font-text-fallback};
-        font-weight: #{$font-text-weight};
-        font-style: #{$font-text-style};
-    }
+  @else {
+    font-family: '#{$font-text-name}', #{$font-text-fallback};
+    font-weight: #{$font-text-weight};
+    font-style: #{$font-text-style};
+  }
 }
 
 // Display font sourcing
@@ -68,10 +68,10 @@
 // Heavy display fonts
 
 @include font-face(
-    $font-display-heavy-name,
-    $font-display-heavy-src,
-    $font-display-heavy-weight,
-    $font-display-heavy-style
+  $font-display-heavy-name,
+  $font-display-heavy-src,
+  $font-display-heavy-weight,
+  $font-display-heavy-style
 );
 
 // Display font setup
@@ -81,17 +81,17 @@
 //   .selector { @include font-text(heavy) }
 
 @mixin font-display($type: default) {
-    @if $type == heavy {
-        font-family: '#{$font-display-heavy-name}', #{$font-display-fallback};
-        font-weight: #{$font-display-heavy-weight};
-        font-style: #{$font-display-heavy-style};
-    }
+  @if $type == heavy {
+    font-family: '#{$font-display-heavy-name}', #{$font-display-fallback};
+    font-weight: #{$font-display-heavy-weight};
+    font-style: #{$font-display-heavy-style};
+  }
 
-    // Default display fonts
+  // Default display fonts
 
-    @else {
-        font-family: '#{$font-display-name}', #{$font-display-fallback};
-        font-weight: #{$font-display-weight};
-        font-style: #{$font-display-style};
-    }
+  @else {
+    font-family: '#{$font-display-name}', #{$font-display-fallback};
+    font-weight: #{$font-display-weight};
+    font-style: #{$font-display-style};
+  }
 }

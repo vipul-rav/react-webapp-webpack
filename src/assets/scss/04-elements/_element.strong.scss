@@ -10,7 +10,7 @@
 // [2] Add the correct font weight in Chrome, Edge, and Safari (^).
 
 strong {
-    @include font-text(heavy);
-    font-weight: inherit; // [1]
-    font-weight: bolder; // [2]
+  @include font-text(heavy);
+  font-weight: inherit; // [1]
+  font-weight: bolder; // [2]
 }

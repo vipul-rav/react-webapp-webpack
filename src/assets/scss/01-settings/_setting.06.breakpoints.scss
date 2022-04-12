@@ -10,11 +10,11 @@
 // set grid breakpoints settings.
 
 $breakpoint-groups: (
-    xs1: map-get($grid-breakpoints, xs1),
-    sm1: map-get($grid-breakpoints, sm1),
-    md1: map-get($grid-breakpoints, md1),
-    lg1: map-get($grid-breakpoints, lg1),
-    xl1: map-get($grid-breakpoints, xl1)
+  xs1: map-get($grid-breakpoints, xs1),
+  sm1: map-get($grid-breakpoints, sm1),
+  md1: map-get($grid-breakpoints, md1),
+  lg1: map-get($grid-breakpoints, lg1),
+  xl1: map-get($grid-breakpoints, xl1)
 ) !default;
 
 // Breakpoint widths
@@ -23,9 +23,9 @@ $breakpoint-groups: (
 // within a map.
 
 $breakpoints: (
-    xs: 0,
-    sm: 600px,
-    md: 960px,
-    lg: 1280px,
-    xl: 1920px
+  xs: 0,
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1920px
 ) !default;

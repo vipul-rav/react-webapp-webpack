@@ -10,98 +10,98 @@
 // ==============
 
 .o-block-field {
-    max-width: block-field(6);
-    display: flex;
+  max-width: block-field(6);
+  display: flex;
 }
 
 // __col
 
 [class*='o-block-field__col'] {
-    display: flex;
-    min-height: $block-field-col-size;
-    margin-right: $block-field-gutter-size;
-    flex-grow: 1;
-    flex-shrink: 1;
-    width: 100%;
+  display: flex;
+  min-height: $block-field-col-size;
+  margin-right: $block-field-gutter-size;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .o-block-field__col {
-    @for $i from 1 through 6 {
-        &-#{$i} {
-            max-width: block-field($i);
-        }
+  @for $i from 1 through 6 {
+    &-#{$i} {
+      max-width: block-field($i);
     }
+  }
 }
 
 // --wrap
 
 .o-block-field__col--wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 // --stack
 
 .o-block-field__col--stack {
-    flex-direction: column;
-    justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 
-    // .c-a-label
+  // .c-a-label
 
-    .c-a-label {
-        margin-bottom: size(1);
-    }
+  .c-a-label {
+    margin-bottom: size(1);
+  }
 }
 
 // .o-block-field--error
 // =====================
 
 .o-block-field--error {
-    // .c-a-input
+  // .c-a-input
 
-    .c-a-input {
-        border-color: palette-utility(error);
+  .c-a-input {
+    border-color: palette-utility(error);
+  }
+
+  // .c-a-textarea
+
+  .c-a-textarea {
+    border-color: palette-utility(error);
+  }
+
+  // .c-a-select
+
+  .c-a-select {
+    select {
+      border-color: palette-utility(error);
     }
 
-    // .c-a-textarea
-
-    .c-a-textarea {
-        border-color: palette-utility(error);
+    &:after {
+      border-color: palette-utility(error);
     }
+  }
 
-    // .c-a-select
+  // .c-a-input-text-prompt
 
-    .c-a-select {
-        select {
-            border-color: palette-utility(error);
-        }
+  .c-a-input-text-prompt {
+    border-color: palette-utility(error);
+    background-color: $color-white;
+  }
 
-        &:after {
-            border-color: palette-utility(error);
-        }
-    }
+  // .c-a-input-icon-control
 
-    // .c-a-input-text-prompt
+  .c-a-input-icon-control {
+    border-color: palette-utility(error);
+    background-color: $color-white;
+  }
 
-    .c-a-input-text-prompt {
-        border-color: palette-utility(error);
-        background-color: $color-white;
-    }
+  // .c-a-input-icon-prompt
 
-    // .c-a-input-icon-control
-
-    .c-a-input-icon-control {
-        border-color: palette-utility(error);
-        background-color: $color-white;
-    }
-
-    // .c-a-input-icon-prompt
-
-    .c-a-input-icon-prompt {
-        border-color: palette-utility(error);
-        background-color: $color-white;
-    }
+  .c-a-input-icon-prompt {
+    border-color: palette-utility(error);
+    background-color: $color-white;
+  }
 }

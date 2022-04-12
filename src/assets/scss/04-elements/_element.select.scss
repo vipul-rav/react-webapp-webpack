@@ -11,13 +11,13 @@
 // [3] Remove the inheritance of text transform in Edge, Firefox, and IE (^).
 
 select {
-    @include font-text(); // [1]
-    font-size: 100%; // [1]
-    line-height: 1.15; // [1]
-    margin: 0; // [2]
-    text-transform: none; // [3]
+  @include font-text(); // [1]
+  font-size: 100%; // [1]
+  line-height: 1.15; // [1]
+  margin: 0; // [2]
+  text-transform: none; // [3]
 
-    &:focus {
-        @include focus-add();
-    }
+  &:focus {
+    @include focus-add();
+  }
 }

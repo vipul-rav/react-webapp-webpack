@@ -12,16 +12,16 @@ $o-global-header-background-color: palette-primary(1);
 // ================
 
 .o-global-header {
-    background-color: $o-global-header-background-color;
+  background-color: $o-global-header-background-color;
 
-    // &.js-fixed-header
+  // &.js-fixed-header
 
-    &.js-fixed-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        @include layers(header);
-        will-change: transform;
-    }
+  &.js-fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include layers(header);
+    will-change: transform;
+  }
 }

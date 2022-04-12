@@ -5,8 +5,8 @@
 // https://developer.mozilla.org/en/docs/Web/HTML/Element/blockquote
 
 blockquote {
-    margin-bottom: size(2);
-    @extend .o-type-size-base5;
-    border-left: size(0.5) solid palette-grey-tint(70);
-    padding-left: size(2);
+  margin-bottom: size(2);
+  @extend .o-type-size-base5;
+  border-left: size(0.5) solid palette-grey-tint(70);
+  padding-left: size(2);
 }

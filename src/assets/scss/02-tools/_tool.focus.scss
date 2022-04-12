@@ -13,8 +13,8 @@
 //   .selector { @include focus-add() }
 
 @mixin focus-add() {
-    outline: 0;
-    box-shadow: 0 0 0 2px $color-focus;
+  outline: 0;
+  box-shadow: 0 0 0 2px $color-focus;
 }
 
 // focus-remove
@@ -24,6 +24,6 @@
 //   .selector { @include focus-remove() }
 
 @mixin focus-remove() {
-    outline: 0;
-    box-shadow: none;
+  outline: 0;
+  box-shadow: none;
 }

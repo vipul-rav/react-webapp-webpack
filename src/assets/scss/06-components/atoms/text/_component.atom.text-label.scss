@@ -9,15 +9,15 @@
 // ===============
 
 .c-a-text-label {
-    @include font-text(heavy);
-    @extend .o-type-size-base4;
+  @include font-text(heavy);
+  @extend .o-type-size-base4;
 }
 .c-a-text-username-label {
-    @include font-text(Default);
-    @extend .o-type-size-base2;
+  @include font-text(Default);
+  @extend .o-type-size-base2;
 }
 .c-a-sm-text-date-label {
-    @include font-text(Default);
-    @extend .o-type-size-base1;
-    color: $dark-grey;
+  @include font-text(Default);
+  @extend .o-type-size-base1;
+  color: $dark-grey;
 }

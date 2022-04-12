@@ -32,117 +32,117 @@ $c-a-input-range-contrast: 5% !default;
 // ===============
 
 @mixin track {
-    cursor: pointer;
-    height: $c-a-input-range-track-height;
-    transition: all 0.3s ease;
-    width: $c-a-input-range-track-width;
+  cursor: pointer;
+  height: $c-a-input-range-track-height;
+  transition: all 0.3s ease;
+  width: $c-a-input-range-track-width;
 }
 
 @mixin thumb {
-    background: $c-a-input-range-thumb-color;
-    border: $c-a-input-range-thumb-border-width solid $c-a-input-range-thumb-border-color;
-    border-radius: $c-a-input-range-thumb-radius;
-    cursor: pointer;
-    height: $c-a-input-range-thumb-height;
-    width: $c-a-input-range-thumb-width;
+  background: $c-a-input-range-thumb-color;
+  border: $c-a-input-range-thumb-border-width solid $c-a-input-range-thumb-border-color;
+  border-radius: $c-a-input-range-thumb-radius;
+  cursor: pointer;
+  height: $c-a-input-range-thumb-height;
+  width: $c-a-input-range-thumb-width;
 }
 
 // .c-a-input-range
 // ================
 
 .c-a-input-range {
-    -webkit-appearance: none;
-    width: $c-a-input-range-track-width;
-    padding: 0;
+  -webkit-appearance: none;
+  width: $c-a-input-range-track-width;
+  padding: 0;
 
-    // :focus
+  // :focus
 
-    &:focus {
-        @include focus-remove();
+  &:focus {
+    @include focus-remove();
 
-        // Webkit
-
-        &::-webkit-slider-thumb {
-            @include focus-add();
-        }
-
-        // Firefox
-
-        &::-moz-range-thumb {
-            @include focus-add();
-        }
-
-        // Internet Explorer
-
-        &::-ms-thumb {
-            @include focus-add();
-        }
-    }
-
-    // .is-disabled & [disabled]
-
-    &.is-disabled,
-    &[disabled] {
-        opacity: 0.5;
-    }
-
-    // ::-webkit...
-
-    &::-webkit-slider-runnable-track {
-        @include track;
-        background: $c-a-input-range-track-color;
-        border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
-        border-radius: $c-a-input-range-track-radius;
-    }
+    // Webkit
 
     &::-webkit-slider-thumb {
-        @include thumb;
-        -webkit-appearance: none;
-        margin-top: ((-$c-a-input-range-track-border-width * 2 + $c-a-input-range-track-height) / 2) -
-            ($c-a-input-range-thumb-height / 2);
+      @include focus-add();
     }
 
-    // ::-moz...
-
-    &::-moz-range-track {
-        @include track;
-        background: $c-a-input-range-track-color;
-        border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
-        border-radius: $c-a-input-range-track-radius;
-    }
+    // Firefox
 
     &::-moz-range-thumb {
-        @include thumb;
-        height: $c-a-input-range-thumb-height / 1.5;
-        width: $c-a-input-range-thumb-width / 1.5;
+      @include focus-add();
     }
 
-    // ::-ms...
-
-    &::-ms-track {
-        @include track;
-        background: transparent;
-        border-color: transparent;
-        border-width: ($c-a-input-range-thumb-height / 2) 0;
-        color: transparent;
-    }
-
-    &::-ms-fill-lower {
-        background: darken($c-a-input-range-track-color, $c-a-input-range-contrast);
-        border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
-        border-radius: $c-a-input-range-track-radius * 2;
-    }
-
-    &::-ms-fill-upper {
-        background: $c-a-input-range-track-color;
-        border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
-        border-radius: $c-a-input-range-track-radius * 2;
-    }
+    // Internet Explorer
 
     &::-ms-thumb {
-        @include thumb;
-        margin-top: 0;
-        height: $c-a-input-range-thumb-height / 1.5;
-        width: $c-a-input-range-thumb-width / 1.5;
+      @include focus-add();
     }
+  }
+
+  // .is-disabled & [disabled]
+
+  &.is-disabled,
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  // ::-webkit...
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+    background: $c-a-input-range-track-color;
+    border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
+    border-radius: $c-a-input-range-track-radius;
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+    -webkit-appearance: none;
+    margin-top: ((-$c-a-input-range-track-border-width * 2 + $c-a-input-range-track-height) / 2) -
+      ($c-a-input-range-thumb-height / 2);
+  }
+
+  // ::-moz...
+
+  &::-moz-range-track {
+    @include track;
+    background: $c-a-input-range-track-color;
+    border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
+    border-radius: $c-a-input-range-track-radius;
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+    height: $c-a-input-range-thumb-height / 1.5;
+    width: $c-a-input-range-thumb-width / 1.5;
+  }
+
+  // ::-ms...
+
+  &::-ms-track {
+    @include track;
+    background: transparent;
+    border-color: transparent;
+    border-width: ($c-a-input-range-thumb-height / 2) 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: darken($c-a-input-range-track-color, $c-a-input-range-contrast);
+    border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
+    border-radius: $c-a-input-range-track-radius * 2;
+  }
+
+  &::-ms-fill-upper {
+    background: $c-a-input-range-track-color;
+    border: $c-a-input-range-track-border-width solid $c-a-input-range-track-border-color;
+    border-radius: $c-a-input-range-track-radius * 2;
+  }
+
+  &::-ms-thumb {
+    @include thumb;
+    margin-top: 0;
+    height: $c-a-input-range-thumb-height / 1.5;
+    width: $c-a-input-range-thumb-width / 1.5;
+  }
 }

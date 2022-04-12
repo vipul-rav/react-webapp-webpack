@@ -16,103 +16,103 @@
 // ==========
 
 .u-padding {
-    &-0 {
-        padding: 0 !important;
+  &-0 {
+    padding: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-#{$i} {
+      padding: ($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // top
 
-        &-#{$i} {
-            padding: ($size) !important;
-        }
+  &-top-0 {
+    padding-top: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-top-#{$i} {
+      padding-top: ($size) !important;
     }
+  }
 
-    // top
+  // right
 
-    &-top-0 {
-        padding-top: 0 !important;
+  &-right-0 {
+    padding-right: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-right-#{$i} {
+      padding-right: ($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // bottom
 
-        &-top-#{$i} {
-            padding-top: ($size) !important;
-        }
+  &-bottom-0 {
+    padding-bottom: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-bottom-#{$i} {
+      padding-bottom: ($size) !important;
     }
+  }
 
-    // right
+  // left
 
-    &-right-0 {
-        padding-right: 0 !important;
+  &-left-0 {
+    padding-left: 0 !important;
+  }
+
+  @for $i from 1 through 25 {
+    $size: size(1 * $i);
+
+    &-left-#{$i} {
+      padding-left: ($size) !important;
     }
+  }
 
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
+  // x (axis)
 
-        &-right-#{$i} {
-            padding-right: ($size) !important;
-        }
+  &-x-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  @for $i from 1 through 8 {
+    $size: size(1 * $i);
+
+    &-x-#{$i} {
+      padding-left: ($size) !important;
+      padding-right: ($size) !important;
     }
+  }
 
-    // bottom
+  // y (axis)
 
-    &-bottom-0 {
-        padding-bottom: 0 !important;
+  &-y-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  @for $i from 1 through 8 {
+    $size: size(1 * $i);
+
+    &-y-#{$i} {
+      padding-top: ($size) !important;
+      padding-bottom: ($size) !important;
     }
-
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
-
-        &-bottom-#{$i} {
-            padding-bottom: ($size) !important;
-        }
-    }
-
-    // left
-
-    &-left-0 {
-        padding-left: 0 !important;
-    }
-
-    @for $i from 1 through 25 {
-        $size: size(1 * $i);
-
-        &-left-#{$i} {
-            padding-left: ($size) !important;
-        }
-    }
-
-    // x (axis)
-
-    &-x-0 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    @for $i from 1 through 8 {
-        $size: size(1 * $i);
-
-        &-x-#{$i} {
-            padding-left: ($size) !important;
-            padding-right: ($size) !important;
-        }
-    }
-
-    // y (axis)
-
-    &-y-0 {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-
-    @for $i from 1 through 8 {
-        $size: size(1 * $i);
-
-        &-y-#{$i} {
-            padding-top: ($size) !important;
-            padding-bottom: ($size) !important;
-        }
-    }
+  }
 }

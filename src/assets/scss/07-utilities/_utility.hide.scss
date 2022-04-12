@@ -13,27 +13,27 @@
 // =======
 
 .u-hide {
-    display: none !important;
+  display: none !important;
 
-    // -#{$key}-up
+  // -#{$key}-up
 
-    @each $breakpoint, $num in ($grid-breakpoints) {
-        $key: nth($breakpoint, 1);
-        @include media-breakpoint-up($key) {
-            &-#{$key}-up {
-                display: none !important;
-            }
-        }
+  @each $breakpoint, $num in ($grid-breakpoints) {
+    $key: nth($breakpoint, 1);
+    @include media-breakpoint-up($key) {
+      &-#{$key}-up {
+        display: none !important;
+      }
     }
+  }
 
-    // -#{$key}-down
+  // -#{$key}-down
 
-    @each $breakpoint, $num in ($grid-breakpoints) {
-        $key: nth($breakpoint, 1);
-        @include media-breakpoint-down($key) {
-            &-#{$key}-down {
-                display: none !important;
-            }
-        }
+  @each $breakpoint, $num in ($grid-breakpoints) {
+    $key: nth($breakpoint, 1);
+    @include media-breakpoint-down($key) {
+      &-#{$key}-down {
+        display: none !important;
+      }
     }
+  }
 }

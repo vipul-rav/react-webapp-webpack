@@ -17,5 +17,5 @@ $block-field-gutter-size: size(2);
 // ===========
 
 @function block-field($num) {
-    @return ($block-field-col-size * $num) + ($block-field-gutter-size * ($num - 1)) + 0px;
+  @return ($block-field-col-size * $num) + ($block-field-gutter-size * ($num - 1)) + 0px;
 }

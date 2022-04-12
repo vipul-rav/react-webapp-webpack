@@ -9,6 +9,6 @@
 // ==============
 
 .c-a-text-body {
-    @include font-text();
-    @extend .o-type-size-base3;
+  @include font-text();
+  @extend .o-type-size-base3;
 }

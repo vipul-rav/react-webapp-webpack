@@ -15,22 +15,22 @@
 // [7] Reset the border.
 
 button {
-    @include font-text(); // [1]
-    font-size: 100%; // [1]
-    margin: 0; // [2]
-    overflow: visible; // [3]
-    text-transform: none; // [4]
-    padding: 0; // [5]
-    background: transparent; // [6]
-    border: none; // [7]
+  @include font-text(); // [1]
+  font-size: 100%; // [1]
+  margin: 0; // [2]
+  overflow: visible; // [3]
+  text-transform: none; // [4]
+  padding: 0; // [5]
+  background: transparent; // [6]
+  border: none; // [7]
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    &:focus {
-        @include focus-add();
-    }
+  &:focus {
+    @include focus-add();
+  }
 }
 
 // Correct the inability to style clickable types in iOS and Safari.
@@ -38,7 +38,7 @@ button {
 button,
 [type='reset'],
 [type='submit'] {
-    appearance: button; // (^)
+  appearance: button; // (^)
 }
 
 // Remove the inner border and padding in Firefox.
@@ -47,8 +47,8 @@ button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
-    border-style: none; // (^)
-    padding: 0; // (^)
+  border-style: none; // (^)
+  padding: 0; // (^)
 }
 
 // Restore the focus styles unset by the previous rule.
@@ -57,23 +57,23 @@ button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
-    outline: 1px dotted ButtonText; // (^)
+  outline: 1px dotted ButtonText; // (^)
 }
 
 button.is-disabled,
 button[disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 // Button role
 // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 
 [role='button'] {
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    &:focus {
-        @include focus-add();
-    }
+  &:focus {
+    @include focus-add();
+  }
 }

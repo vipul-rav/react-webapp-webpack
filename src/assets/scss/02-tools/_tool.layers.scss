@@ -1,12 +1,12 @@
 $z-index: (
-    root: 1,
-    sub: -1
+  root: 1,
+  sub: -1
 );
 
 @function z-index($key) {
-    @return map-get($z-index, $key);
+  @return map-get($z-index, $key);
 }
 
 @mixin layers($key) {
-    z-index: z-index($key);
+  z-index: z-index($key);
 }

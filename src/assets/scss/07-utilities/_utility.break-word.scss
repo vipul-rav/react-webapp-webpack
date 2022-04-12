@@ -17,33 +17,33 @@
 // [4] The following direct descendant wildcard will catch any inner elements (e.g. <strong>, <em>).
 
 @mixin break-word() {
-    word-break: break-word !important; // [1]
-    word-wrap: break-word !important; // [1]
-    display: inline-block; // [2]
-    max-width: 100%; // [3]
+  word-break: break-word !important; // [1]
+  word-wrap: break-word !important; // [1]
+  display: inline-block; // [2]
+  max-width: 100%; // [3]
 }
 
 @mixin break-word-block() {
-    word-break: break-word !important; // [1]
-    word-wrap: break-word !important; // [1]
-    max-width: 100%; // [3]
+  word-break: break-word !important; // [1]
+  word-wrap: break-word !important; // [1]
+  max-width: 100%; // [3]
 }
 
 // .u-break-word
 // =============
 
 .u-break-word {
-    @include break-word();
+  @include break-word();
 
-    * {
-        @include break-word(); // [4]
-    }
+  * {
+    @include break-word(); // [4]
+  }
 }
 
 .u-break-word--block {
-    @include break-word-block();
+  @include break-word-block();
 
-    * {
-        @include break-word-block(); // [4]
-    }
+  * {
+    @include break-word-block(); // [4]
+  }
 }

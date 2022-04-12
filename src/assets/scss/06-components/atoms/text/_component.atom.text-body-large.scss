@@ -9,6 +9,6 @@
 // ====================
 
 .c-a-text-body-large {
-    @include font-text();
-    @extend .o-type-size-base4;
+  @include font-text();
+  @extend .o-type-size-base4;
 }

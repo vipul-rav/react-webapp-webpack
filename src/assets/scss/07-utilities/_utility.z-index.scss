@@ -12,15 +12,15 @@
 // ==========
 
 .u-z-index {
-    &-0 {
-        z-index: 0 !important;
-    }
+  &-0 {
+    z-index: 0 !important;
+  }
 
-    @for $i from 1 through 8 {
-        $value: $i;
+  @for $i from 1 through 8 {
+    $value: $i;
 
-        &-#{$i} {
-            z-index: ($value) !important;
-        }
+    &-#{$i} {
+      z-index: ($value) !important;
     }
+  }
 }

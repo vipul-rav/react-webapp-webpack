@@ -5,9 +5,8 @@
 // https://developer.mozilla.org/en/docs/Web/HTML/Element/h2
 
 h2 {
-    @include font-display(heavy);
-    @extend .o-type-size-base4;
-    margin-bottom: size(2);
-    color: $dark-grey;
-  }
-  
+  @include font-display(heavy);
+  @extend .o-type-size-base4;
+  margin-bottom: size(2);
+  color: $dark-grey;
+}

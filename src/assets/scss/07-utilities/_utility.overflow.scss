@@ -13,51 +13,51 @@
 // ===========
 
 .u-overflow {
-    // scroll
+  // scroll
 
-    &-scroll {
-        overflow: scroll;
-    }
-    &-x-scroll {
-        overflow-x: scroll;
-    }
-    &-y-scroll {
-        overflow-y: scroll;
-    }
+  &-scroll {
+    overflow: scroll;
+  }
+  &-x-scroll {
+    overflow-x: scroll;
+  }
+  &-y-scroll {
+    overflow-y: scroll;
+  }
 
-    // hidden
+  // hidden
 
-    &-hidden {
-        overflow: hidden;
-    }
-    &-x-hidden {
-        overflow-x: hidden;
-    }
-    &-y-hidden {
-        overflow-y: hidden;
-    }
+  &-hidden {
+    overflow: hidden;
+  }
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+  &-y-hidden {
+    overflow-y: hidden;
+  }
 
-    // auto
+  // auto
 
-    &-auto {
-        overflow: auto;
-    }
-    &-x-auto {
-        overflow-x: auto;
-    }
-    &-y-auto {
-        overflow-y: auto;
-    }
+  &-auto {
+    overflow: auto;
+  }
+  &-x-auto {
+    overflow-x: auto;
+  }
+  &-y-auto {
+    overflow-y: auto;
+  }
 
-    // visible
+  // visible
 
-    &-visible {
-        overflow: visible;
-    }
-    &-x-visible {
-        overflow-x: visible;
-    }
-    &-y-visible {
-        overflow-y: visible;
-    }
+  &-visible {
+    overflow: visible;
+  }
+  &-x-visible {
+    overflow-x: visible;
+  }
+  &-y-visible {
+    overflow-y: visible;
+  }
 }

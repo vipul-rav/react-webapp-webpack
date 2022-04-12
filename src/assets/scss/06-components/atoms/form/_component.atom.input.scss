@@ -15,7 +15,7 @@ $c-a-input-border-width: 1px !default;
 $c-a-input-border-style: solid !default;
 $c-a-input-border-color: $dark-grey !default;
 $c-a-input-border-color-disabled: mix($color-body, $color-white, 30%) !default;
-$c-a-input-border-color-focus: $dark-grey !default;  
+$c-a-input-border-color-focus: $dark-grey !default;
 
 $c-a-input-color: $color-body !default;
 $c-a-input-color-disabled: mix($color-body, $color-white, 30%) !default;
@@ -32,78 +32,78 @@ $c-a-input-color-focus: $color-body !default;
 .c-a-input--search,
 .c-a-input--tel,
 .c-a-input--url {
-    @include type-responsive(base2);
-    width: 100%;
+  @include type-responsive(base2);
+  width: 100%;
   margin-bottom: size(1);
-    height: block-field(1);
-    color: $c-a-input-color;
-    border-width: $c-a-input-border-width;
-    border-style: $c-a-input-border-style;
-    border-color: $c-a-input-border-color;
-    border-radius: $global-radius;
-    background-color: $c-a-input-background-color;
-    appearance: none;
+  height: block-field(1);
+  color: $c-a-input-color;
+  border-width: $c-a-input-border-width;
+  border-style: $c-a-input-border-style;
+  border-color: $c-a-input-border-color;
+  border-radius: $global-radius;
+  background-color: $c-a-input-background-color;
+  appearance: none;
   margin-bottom: size(1);
   padding: size(1);
 
-    // .is-disabled or [disabled]
+  // .is-disabled or [disabled]
 
-    &.is-disabled,
-    &[disabled] {
-        color: $c-a-input-color-disabled;
-        border-color: $c-a-input-border-color-disabled;
-        background-color: $c-a-input-background-color-disabled;
+  &.is-disabled,
+  &[disabled] {
+    color: $c-a-input-color-disabled;
+    border-color: $c-a-input-border-color-disabled;
+    background-color: $c-a-input-background-color-disabled;
 
-        &:hover {
-            cursor: default;
-        }
+    &:hover {
+      cursor: default;
     }
+  }
 
-    // :focus
+  // :focus
 
-    &:focus {
-        color: $c-a-input-color-focus;
-        border-color: $c-a-input-border-color-focus;
-        background-color: $c-a-input-background-color-focus;
-        position: relative;
-        @include layers(root);
-    }
+  &:focus {
+    color: $c-a-input-color-focus;
+    border-color: $c-a-input-border-color-focus;
+    background-color: $c-a-input-background-color-focus;
+    position: relative;
+    @include layers(root);
+  }
 
-    // .has-prefix
+  // .has-prefix
 
-    &.has-prefix {
-        border-radius: 0 $global-radius $global-radius 0;
-        width: calc(100% - #{size(6)});
-    }
+  &.has-prefix {
+    border-radius: 0 $global-radius $global-radius 0;
+    width: calc(100% - #{size(6)});
+  }
 
-    // .has-suffix
+  // .has-suffix
 
-    &.has-suffix {
-        border-radius: $global-radius 0 0 $global-radius;
-        width: calc(100% - #{size(6)});
-    }
+  &.has-suffix {
+    border-radius: $global-radius 0 0 $global-radius;
+    width: calc(100% - #{size(6)});
+  }
 
-    &.has-prefix.has-suffix {
-        border-radius: 0px;
-    }
+  &.has-prefix.has-suffix {
+    border-radius: 0px;
+  }
 }
 
 // --number
 
 .c-a-input--number {
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-        appearance: none;
-        margin: 0;
-    }
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 }
 
 // --search
 
 .c-a-input--search {
-    appearance: none;
+  appearance: none;
 
-    &::-ms-clear {
-        display: none;
-    }
+  &::-ms-clear {
+    display: none;
+  }
 }

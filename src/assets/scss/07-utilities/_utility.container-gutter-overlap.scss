@@ -13,13 +13,13 @@
 // ===========================
 
 .u-container-gutter-overlap {
-    width: auto !important;
+  width: auto !important;
 
-    @each $breakpoint in $breakpoint-groups {
-        $key: nth($breakpoint, 1);
-        @include media-breakpoint-up($key) {
-            margin-left: -#{map-get($container-padding, $key)};
-            margin-right: -#{map-get($container-padding, $key)};
-        }
+  @each $breakpoint in $breakpoint-groups {
+    $key: nth($breakpoint, 1);
+    @include media-breakpoint-up($key) {
+      margin-left: -#{map-get($container-padding, $key)};
+      margin-right: -#{map-get($container-padding, $key)};
     }
+  }
 }

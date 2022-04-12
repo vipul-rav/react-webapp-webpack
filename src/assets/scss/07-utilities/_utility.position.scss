@@ -13,27 +13,27 @@
 // ===========
 
 .u-position {
-    // static
+  // static
 
-    &-static {
-        position: static !important;
-    }
+  &-static {
+    position: static !important;
+  }
 
-    // relative
+  // relative
 
-    &-relative {
-        position: relative !important;
-    }
+  &-relative {
+    position: relative !important;
+  }
 
-    // absolute
+  // absolute
 
-    &-absolute {
-        position: absolute !important;
-    }
+  &-absolute {
+    position: absolute !important;
+  }
 
-    // fixed
+  // fixed
 
-    &-fixed {
-        position: fixed !important;
-    }
+  &-fixed {
+    position: fixed !important;
+  }
 }

@@ -5,6 +5,6 @@
 // https://developer.mozilla.org/en/docs/Web/HTML/Element/p
 
 p {
-    @extend .u-break-word--block;
-    margin-bottom: size(2);
+  @extend .u-break-word--block;
+  margin-bottom: size(2);
 }

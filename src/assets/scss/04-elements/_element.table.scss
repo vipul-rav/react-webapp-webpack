@@ -5,42 +5,42 @@
 // https://developer.mozilla.org/en/docs/Web/HTML/Element/table
 
 table {
-    border-collapse: collapse;
-    margin-bottom: size(2);
+  border-collapse: collapse;
+  margin-bottom: size(2);
 }
 
-
 .search-result-table {
-    border-collapse: collapse;
-    margin-bottom: size(2);
-    width: 100%;
-    table-layout: fixed;
-    word-break: break-word;
-    td:first-of-type {
-        width: 20px;
+  border-collapse: collapse;
+  margin-bottom: size(2);
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
+  td:first-of-type {
+    width: 20px;
+  }
+  thead {
+    border: 1px solid;
+    border-left: none;
+    border-right: none;
+    th {
+      min-width: 50px;
+      border: none;
+      select,
+      input {
+        width: 100%;
+      }
     }
-    thead {
-        border: 1px solid;
-        border-left: none;
-        border-right: none;
-        th {
-            min-width: 50px;
-            border: none;
-            select, input {
-                width: 100%;
-            }
-        }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid;
+      td {
+        border: none;
+        min-width: 50px;
+      }
+      select {
+        width: 100%;
+      }
     }
-    tbody {
-        tr {
-            border-bottom: 1px solid;
-            td {
-                border: none;
-                min-width: 50px;
-            }
-            select {
-                width: 100%;
-            }
-        }
-    }
+  }
 }

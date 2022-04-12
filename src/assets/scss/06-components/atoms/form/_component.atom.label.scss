@@ -17,22 +17,22 @@ $c-a-label-supplement-color: palette-grey-tint(30) !default;
   @include font-text(Default);
   @extend .o-type-size-base2;
   color: $c-a-label-color;
-  line-height: 33px; 
+  line-height: 33px;
 
-    // __title
+  // __title
 
-    .c-a-label__title {
-        font-weight: bold;
+  .c-a-label__title {
+    font-weight: bold;
 
-        &:after {
-            content: ' ';
-        }
+    &:after {
+      content: ' ';
     }
+  }
 
-    // __supplement
+  // __supplement
 
-    .c-a-label__supplement {
-        color: $c-a-label-supplement-color;
-        display: inline-block;
-    }
+  .c-a-label__supplement {
+    color: $c-a-label-supplement-color;
+    display: inline-block;
+  }
 }
